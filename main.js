@@ -176,7 +176,110 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => scrollSpyObserver.observe(section));
   }
 
-  // ===== Parallax suave (throttled with rAF + reduced motion safe) =====
+  // ===== Contact Form =====
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      
+      // Deshabilitar botón y mostrar estado
+      submitBtn.disabled = true;
+      const buttonText = html.getAttribute('data-lang') === 'en' ? 'Sending...' : 'Enviando...';
+      submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${buttonText}`;
+
+      const formData = new FormData(contactForm);
+      
+      try {
+        // Enviar a Formspree (reemplaza TU_ID_FORMSPREE con tu ID)
+        // Puedes obtenerlo en https://formspree.io/
+        const response = await fetch('https://formspree.io/f/mqedeozk', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Éxito
+          const successMsg = html.getAttribute('data-lang') === 'en'
+            ? 'Message sent successfully! Thank you for contacting me.'
+            : '¡Mensaje enviado con éxito! Gracias por contactarme.';
+          
+          showFormMessage(successMsg, 'success');
+          contactForm.reset();
+        } else {
+          // Error del servidor
+          const errorMsg = html.getAttribute('data-lang') === 'en'
+            ? 'There was an error. Please try again or contact me directly.'
+            : 'Hubo un error. Por favor intenta de nuevo o contactame directamente.';
+          
+          showFormMessage(errorMsg, 'error');
+        }
+      } catch (error) {
+        // Error de red
+        const errorMsg = html.getAttribute('data-lang') === 'en'
+          ? 'Network error. Please try again or contact me directly.'
+          : 'Error de red. Por favor intenta de nuevo o contactame directamente.';
+        
+        showFormMessage(errorMsg, 'error');
+      } finally {
+        // Restaurar botón
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    });
+
+    // Función auxiliar para mostrar mensajes
+    function showFormMessage(message, type) {
+      // Remover mensaje anterior si existe
+      const oldMsg = contactForm.querySelector('.form-message');
+      if (oldMsg) oldMsg.remove();
+
+      // Crear mensaje
+      const msgEl = document.createElement('div');
+      msgEl.className = `form-message form-message-${type}`;
+      msgEl.textContent = message;
+      msgEl.style.cssText = `
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.8rem;
+        font-size: 0.85rem;
+        animation: slideIn 0.3s ease;
+        ${type === 'success'
+          ? 'background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.5); color: #86efac;'
+          : 'background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.5); color: #fca5a5;'
+        }
+      `;
+
+      // Insertar antes del botón
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.parentNode.insertBefore(msgEl, submitBtn.nextSibling);
+
+      // Auto-remover después de 5 segundos
+      setTimeout(() => msgEl.remove(), 5000);
+    }
+  }
+
+  // ===== Animación para mensajes =====
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+  document.head.appendChild(style);
   const heroVisual = document.querySelector('.hero-visual-inner');
   if (heroVisual && !prefersReducedMotion) {
     let ticking = false;

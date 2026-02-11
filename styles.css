@@ -868,9 +868,7 @@ section {
 }
 
 .contact-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
-  gap: 2rem;
+  display: block;
 }
 
 .contact-info-block {
@@ -979,7 +977,39 @@ textarea {
 .form-note {
   font-size: 0.75rem;
   color: #94a3b8;
-  margin-top: 0.3rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.contact-alternatives {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.contact-alternative-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.contact-alternative-item i {
+  color: var(--accent-soft);
+  font-size: 0.9rem;
+}
+
+.contact-alternative-item a {
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-alternative-item a:hover {
+  color: #9be7ff;
 }
 
 /* ---------- FOOTER ---------- */

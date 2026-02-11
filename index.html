@@ -470,36 +470,59 @@
 
       <div class="glass-card">
         <div class="contact-layout">
-          <div class="contact-info-block">
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-              <div>
-                <div class="contact-label">Email</div>
-                <div class="contact-value"><a href="mailto:yezid@adarme.es" target="_blank" rel="noopener">yezid@adarme.es</a></div>
+          <!-- FORMULARIO -->
+          <div class="contact-form">
+            <form id="contactForm" method="POST">
+              <div class="form-row">
+                <label for="name">
+                  <span class="lang lang-es">Nombre</span>
+                  <span class="lang lang-en">Name</span>
+                </label>
+                <input type="text" id="name" name="name" required>
               </div>
-            </div>
 
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
-              <div>
-                <div class="contact-label"><span class="lang lang-es">Teléfono</span><span class="lang lang-en">Phone</span></div>
-                <div class="contact-value"><a href="tel:+34646442497">+34 646 442 497</a></div>
+              <div class="form-row">
+                <label for="email">
+                  <span class="lang lang-es">Email</span>
+                  <span class="lang lang-en">Email</span>
+                </label>
+                <input type="email" id="email" name="email" required>
               </div>
-            </div>
 
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
-              <div>
-                <div class="contact-label">LinkedIn</div>
-                <div class="contact-value">
-                  <a href="https://www.linkedin.com/in/yezidadarme/" target="_blank" rel="noopener">https://www.linkedin.com/in/yezidadarme/</a>
+              <div class="form-row">
+                <label for="message">
+                  <span class="lang lang-es">Mensaje</span>
+                  <span class="lang lang-en">Message</span>
+                </label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span class="lang lang-es">Enviar</span>
+                <span class="lang lang-en">Send</span>
+              </button>
+
+              <p class="form-note">
+                <span class="lang lang-es">O bien contacta directamente:</span>
+                <span class="lang lang-en">Or contact me directly:</span>
+              </p>
+
+              <div class="contact-alternatives">
+                <div class="contact-alternative-item">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <a href="mailto:yezid@adarme.es">yezid@adarme.es</a>
+                </div>
+                <div class="contact-alternative-item">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <a href="tel:+34646442497">+34 646 442 497</a>
+                </div>
+                <div class="contact-alternative-item">
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                  <a href="https://www.linkedin.com/in/yezidadarme/" target="_blank" rel="noopener">linkedin.com/in/yezidadarme</a>
                 </div>
               </div>
-            </div>
-
+            </form>
           </div>
-
-
         </div>
       </div>
     </section>
