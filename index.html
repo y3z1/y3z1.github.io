@@ -1,49 +1,51 @@
 <!doctype html>
 <html lang="es" data-lang="es">
 <head>
-  <!-- META -->
   <meta charset="utf-8">
   <meta name="robots" content="noodp">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!-- PAGE TITLE -->
-  <title>Yezid Adarme | Logistics Professional</title>
+  <title>Yezid Adarme | Operaciones Logísticas e Inventarios</title>
+  <meta name="description" content="Especialista en fiabilidad operativa e inventario. RCA, precisión de inventario, optimización de procesos y sincronización de stock con Shopify/WMS.">
 
-  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- CSS EXTERNO -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-  <!-- ========= HEADER ========= -->
+<body>
+  <a class="skip-link" href="#hero">
+    <span class="lang lang-es">Saltar al contenido</span>
+    <span class="lang lang-en">Skip to content</span>
+  </a>
+
   <header class="header">
     <div class="header-inner">
-      <div class="logo">
+      <div class="logo" aria-label="Yezid Adarme">
         <div class="logo-name">YEZID ADARME</div>
         <div class="logo-role">
-          <span class="lang lang-es">LOGÍSTICA & ALMACÉN</span>
-          <span class="lang lang-en">LOGISTICS & WAREHOUSING</span>
+          <span class="lang lang-es">FIABILIDAD OPERATIVA & INVENTARIOS</span>
+          <span class="lang lang-en">OPERATIONAL RELIABILITY & INVENTORY</span>
         </div>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Navegación principal">
         <div class="nav-links" id="navLinks">
           <a href="#hero" class="nav-link">
             <span class="lang lang-es">Inicio</span>
             <span class="lang lang-en">Home</span>
           </a>
-          <a href="#about" class="nav-link">
-            <span class="lang lang-es">Sobre mí</span>
-            <span class="lang lang-en">About</span>
-          </a>
+          <a href="#about" class="nav-link"><span class="lang lang-es">Sobre mí</span><span class="lang lang-en">About</span></a>
           <a href="#experience" class="nav-link">
             <span class="lang lang-es">Experiencia</span>
             <span class="lang lang-en">Experience</span>
+          </a>
+          <a href="#education" class="nav-link">
+            <span class="lang lang-es">Formación</span>
+            <span class="lang lang-en">Education</span>
           </a>
           <a href="#skills" class="nav-link">
             <span class="lang lang-es">Habilidades</span>
@@ -59,860 +61,454 @@
           </a>
         </div>
 
-        <!-- Botón único ES/EN -->
-        <button class="lang-toggle" id="langToggle" data-lang="es" aria-label="Cambiar idioma">
-          <i class="fas fa-language"></i>
+        <button class="lang-toggle" id="langToggle" data-lang="es" aria-label="Cambiar idioma" type="button">
+          <i class="fas fa-language" aria-hidden="true"></i>
           <span class="label-es">ES</span>
           <span class="label-en">EN</span>
         </button>
 
-        <!-- Burger móvil -->
-        <button class="burger" id="burgerBtn" aria-label="Menu">
-          <i class="fas fa-bars"></i>
+        <button class="burger" id="burgerBtn" aria-label="Menú" aria-expanded="false" aria-controls="navLinks" type="button">
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
       </nav>
     </div>
   </header>
 
   <main class="page">
-    <!-- ========= HERO ========= -->
-    <section id="hero">
+    <!-- HERO -->
+    <section id="hero" class="section-hero">
       <div class="hero-layout">
         <div class="hero-copy reveal">
           <div class="hero-tagline">
-            <span class="lang lang-es">Eficiencia, precisión y visibilidad de extremo a extremo</span>
-            <span class="lang lang-en">Efficiency, accuracy & end-to-end visibility</span>
+            <span class="lang lang-es">Mejora continua. Resultados reales.</span>
+            <span class="lang lang-en">Continuous improvement. Real results.</span>
           </div>
-          <h1>
-            <span class="lang lang-es">Profesional en Logística</span>
-            <span class="lang lang-en">Logistics Professional</span>
+
+          <h1 class="hero-title">
+            <span class="lang lang-es">Especialista en Mejora Continua y Precisión de Inventario</span>
+            <span class="lang lang-en">Continuous Improvement & Inventory Accuracy Specialist</span>
             <span> | Yezid Adarme</span>
           </h1>
+
           <p class="hero-text">
             <span class="lang lang-es">
-              Especializado en gestión de almacenes, control de inventarios y automatización de procesos,
-              integrando soluciones IT para mejorar la eficiencia operativa y la trazabilidad en la cadena
-              de suministro.
+              Más de 10 años optimizando operaciones de alta exigencia (Amazon 3PL, e-commerce internacional).
+              Especializado en RCA, precisión de inventario y sincronización de stock con WMS/Shopify.
             </span>
             <span class="lang lang-en">
-              Specialized in warehouse management, inventory control and process automation, integrating IT
-              solutions to enhance operational efficiency and end-to-end supply chain visibility.
+              Over 10 years optimizing high-demand operations (Amazon 3PL, international e-commerce).
+              Specialized in RCA, inventory accuracy, and stock synchronization with WMS/Shopify.
             </span>
           </p>
 
           <div class="hero-highlights">
             <div class="pill">
-              <span class="lang lang-es">+15 años en operaciones de almacén</span>
-              <span class="lang lang-en">15+ years in warehouse operations</span>
+              <span class="lang lang-es">Root Cause Analysis (RCA)</span>
+              <span class="lang lang-en">Root Cause Analysis (RCA)</span>
             </div>
             <div class="pill">
-              <span class="lang lang-es">Implementación de sistemas bin location</span>
-              <span class="lang lang-en">Bin location system implementation</span>
+              <span class="lang lang-es">Precisión de Inventario</span>
+              <span class="lang lang-en">Inventory Accuracy</span>
             </div>
             <div class="pill">
-              <span class="lang lang-es">Integración IT en operación logística</span>
-              <span class="lang lang-en">IT integration in logistics</span>
+              <span class="lang lang-es">SQL e IA en Supply Chain</span>
+              <span class="lang lang-en">SQL & AI in Supply Chain</span>
             </div>
+          </div>
+
+          <div class="hero-strategic-note muted-text">
+            <span class="lang lang-es">KPIs estrictos · Procesos estandarizados · Mejora continua</span>
+            <span class="lang lang-en">Strict KPIs · Standardized processes · Continuous improvement</span>
           </div>
 
           <div class="hero-actions">
             <a href="#experience" class="btn btn-primary">
-              <i class="fas fa-route"></i>
+              <i class="fas fa-route" aria-hidden="true"></i>
               <span class="lang lang-es">Ver trayectoria</span>
               <span class="lang lang-en">View experience</span>
             </a>
             <a href="#contact" class="btn btn-ghost">
-              <i class="fas fa-paper-plane"></i>
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
               <span class="lang lang-es">Contactar</span>
               <span class="lang lang-en">Get in touch</span>
             </a>
           </div>
 
           <div class="hero-badge">
-            <i class="fas fa-globe-europe"></i>
-            <span class="lang lang-es">Basado en Ashbourne (Irlanda) · Disponible para oportunidades internacionales</span>
-            <span class="lang lang-en">Based in Ashbourne (Ireland) · Open to international opportunities</span>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span class="lang lang-es">Reus (Tarragona) · Disponibilidad para movilidad</span>
+            <span class="lang lang-en">Reus (Tarragona) · Open to mobility</span>
           </div>
         </div>
 
         <div class="hero-visual reveal">
           <div class="hero-visual-inner glass-card">
-            <div class="hero-visual-overlay"></div>
             <div class="hero-stat-grid">
               <div class="hero-stat">
                 <div class="hero-stat-label">
-                  <span class="lang lang-es">Gestión de almacén</span>
-                  <span class="lang lang-en">Warehouse management</span>
+                  <span class="lang lang-es">Proyecto Reciente</span>
+                  <span class="lang lang-en">Recent Project</span>
                 </div>
-                <div class="hero-stat-value">Ronnefeldt</div>
-                <div class="hero-stat-note">
-                  <span class="lang lang-es">World of Tea · Irlanda</span>
-                  <span class="lang lang-en">World of Tea · Ireland</span>
-                </div>
+                <div class="hero-stat-value">Ronnefeldt World of Tea</div>
+                <div class="hero-stat-note">Dublin</div>
               </div>
               <div class="hero-stat">
                 <div class="hero-stat-label">
-                  <span class="lang lang-es">Operaciones de gran volumen</span>
-                  <span class="lang lang-en">High-volume operations</span>
+                  <span class="lang lang-es">Experiencia Core</span>
+                  <span class="lang lang-en">Core Experience</span>
                 </div>
-                <div class="hero-stat-value">Amazon</div>
-                <div class="hero-stat-note">
-                  <span class="lang lang-es">Kuehne+Nagel · España</span>
-                  <span class="lang lang-en">Kuehne+Nagel · Spain</span>
-                </div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-label">
-                  <span class="lang lang-es">Automatización</span>
-                  <span class="lang lang-en">Automation</span>
-                </div>
-                <div class="hero-stat-value">IT + SGA</div>
-                <div class="hero-stat-note">
-                  <span class="lang lang-es">Integración tecnológica en almacén</span>
-                  <span class="lang lang-en">Technology integration in warehouse</span>
-                </div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-label">
-                  <span class="lang lang-es">Idiomas</span>
-                  <span class="lang lang-en">Languages</span>
-                </div>
-                <div class="hero-stat-value">
-                  ES · EN · CA
-                </div>
-                <div class="hero-stat-note">
-                  <span class="lang lang-es">Entornos internacionales</span>
-                  <span class="lang lang-en">International environments</span>
-                </div>
+                <div class="hero-stat-value">Amazon 3PL</div>
+                <div class="hero-stat-note">K+N</div>
               </div>
             </div>
 
             <div class="hero-profile">
-              <div class="hero-avatar">
-                <!-- Sustituye esta URL por tu foto profesional -->
-                <img src="https://via.placeholder.com/300x300.png?text=Foto+Yezid" alt="Yezid Adarme">
+              <div class="hero-avatar" aria-hidden="true">
+                <img src="assets/img/Y3z1.png" alt="">
               </div>
               <div class="hero-profile-text">
-                <span class="lang lang-es">
-                  Actualmente liderando operaciones de almacén en Ronnefeldt World of Tea (Irlanda),
-                  con foco en organización avanzada, automatización y mejora continua.
-                </span>
-                <span class="lang lang-en">
-                  Currently leading warehouse operations at Ronnefeldt World of Tea (Ireland),
-                  focusing on advanced organization, automation and continuous improvement.
-                </span>
-                <span>
-                  <i class="fas fa-map-marker-alt"></i> Ashbourne · Ireland
-                </span>
+                <span class="lang lang-es">Identifico la causa raíz y convierto la incidencia en un proceso bajo control.</span>
+                <span class="lang lang-en">I identify the root cause and convert incidents into controlled, standardized processes.</span>
               </div>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========= ABOUT ========= -->
+    <!-- ABOUT -->
     <section id="about" class="reveal">
       <h2 class="section-title">
         <span class="lang lang-es">Sobre mí</span>
-        <span class="lang lang-en">About me</span>
+        <span class="lang lang-en">About</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Trayectoria, valores y enfoque</span>
-        <span class="lang lang-en">Background, values & approach</span>
-      </p>
       <div class="section-divider"></div>
 
-      <div class="about-grid">
-        <div class="glass-card">
-          <p class="about-paragraph">
+      <div class="glass-card about-grid">
+        <div class="about-block">
+          <h3 class="card-title">
+            <span class="lang lang-es">Qué hago</span>
+            <span class="lang lang-en">What I do</span>
+          </h3>
+          <p class="muted-text">
             <span class="lang lang-es">
-              Soy un profesional de la logística con casi una década de experiencia en operaciones de almacén,
-              gestión de inventarios y coordinación de equipos en entornos de alta exigencia. Mi trayectoria incluye
-              operaciones para grandes marcas como Amazon, a través de Kuehne+Nagel, y la gestión integral de almacén
-              en Ronnefeldt World of Tea.
+              Trabajo dentro de equipos logísticos para mejorar la fiabilidad operativa y la precisión de inventario. Identifico puntos de fricción en procesos, reduzco errores y aseguro que el stock físico y los sistemas estén alineados, protegiendo ventas y servicio.
             </span>
             <span class="lang lang-en">
-              I am a logistics professional with nearly a decade of experience in warehouse operations, inventory
-              management and team coordination in high-demand environments. My background includes operations for major
-              brands such as Amazon, through Kuehne+Nagel, and full warehouse management at Ronnefeldt World of Tea.
+              I work within logistics teams to improve operational reliability and inventory accuracy. I identify process friction points, reduce errors and ensure physical stock and systems are aligned, protecting sales and service.
             </span>
           </p>
-          <p class="about-paragraph">
-            <span class="lang lang-es">
-              Me especializo en automatizar procesos, integrar sistemas IT en la operación diaria y diseñar flujos
-              de trabajo que aumenten la precisión, reduzcan tiempos de preparación y mejoren la trazabilidad.
-              Disfruto analizando datos, detectando cuellos de botella y aplicando soluciones prácticas y medibles.
-            </span>
-            <span class="lang lang-en">
-              I specialize in automating processes, integrating IT systems into daily operations and designing workflows
-              that increase accuracy, reduce lead times and improve traceability. I enjoy analyzing data,
-              identifying bottlenecks and applying practical, measurable solutions.
-            </span>
-          </p>
-          <p class="about-paragraph">
-            <span class="lang lang-es">
-              <strong>Valores clave:</strong> organización, claridad en la comunicación, orientación a resultados,
-              trabajo en equipo y mejora continua.
-            </span>
-            <span class="lang lang-en">
-              <strong>Core values:</strong> organization, clear communication, results orientation, teamwork and
-              a continuous improvement mindset.
-            </span>
-          </p>
-
-          <div class="about-meta">
-            <div>
-              <div class="about-meta-label">
-                <span class="lang lang-es">Ubicación</span>
-                <span class="lang lang-en">Location</span>
-              </div>
-              <div>Ashbourne, Co. Meath · Ireland</div>
-            </div>
-            <div>
-              <div class="about-meta-label">
-                <span class="lang lang-es">Idiomas</span>
-                <span class="lang lang-en">Languages</span>
-              </div>
-              <div>
-                <span class="lang lang-es">Español (nativo), Inglés y Catalán (profesional)</span>
-                <span class="lang lang-en">Spanish (native), English & Catalan (professional)</span>
-              </div>
-            </div>
-            <div>
-              <div class="about-meta-label">
-                <span class="lang lang-es">Intereses</span>
-                <span class="lang lang-en">Interests</span>
-              </div>
-              <div>
-                <span class="lang lang-es">Viajes, tecnología, deporte y aprendizaje continuo</span>
-                <span class="lang lang-en">Travel, technology, sports and continuous learning</span>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="glass-card about-photo-card">
-          <div style="display:flex;justify-content:center;">
-            <img class="profile-pic" src="https://via.placeholder.com/300x300.png?text=Foto+Yezid" alt="Yezid Adarme">
-          </div>
-          <div class="photo-badge">
-            <i class="fas fa-warehouse"></i>
-            <span class="lang lang-es">Logística, almacenes y mejora continua</span>
-            <span class="lang lang-en">Logistics, warehousing & continuous improvement</span>
-          </div>
+        <div class="about-block">
+          <h3 class="card-title">
+            <span class="lang lang-es">Cómo trabajo</span>
+            <span class="lang lang-en">How I work</span>
+          </h3>
+          <ul class="muted-text list-check">
+            <li>
+              <span class="lang lang-es">Análisis de causa raíz (RCA) aplicado a incidencias reales.</span>
+              <span class="lang lang-en">Root cause analysis (RCA) applied to real incidents.</span>
+            </li>
+            <li>
+              <span class="lang lang-es">Acciones correctivas y preventivas (CAPA) orientadas a resultados.</span>
+              <span class="lang lang-en">Corrective and preventive actions (CAPA) focused on results.</span>
+            </li>
+            <li>
+              <span class="lang lang-es">Seguimiento de KPIs operativos: calidad, precisión y tiempos.</span>
+              <span class="lang lang-en">Monitoring operational KPIs: quality, accuracy and timing.</span>
+            </li>
+            <li>
+              <span class="lang lang-es">Estandarización de procesos (SOPs) y enfoque constante en mejora continua.</span>
+              <span class="lang lang-en">Standardization of processes (SOPs) and a continuous improvement focus.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ========= EXPERIENCE ========= -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="reveal">
       <h2 class="section-title">
-        <span class="lang lang-es">Experiencia laboral</span>
+        <span class="lang lang-es">Experiencia profesional</span>
         <span class="lang lang-en">Work experience</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Evolución en operaciones de almacén y logística</span>
-        <span class="lang lang-en">Progression in warehouse & logistics operations</span>
-      </p>
       <div class="section-divider"></div>
 
       <div class="glass-card">
         <div class="timeline">
-          <!-- Ronnefeldt -->
+
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-header">
-              <div class="timeline-role">
-                <span class="lang lang-es">Warehouse Manager</span>
-                <span class="lang lang-en">Warehouse Manager</span>
-              </div>
-              <div class="timeline-meta">
-                Ronnefeldt World of Tea · Ireland
-              </div>
+              <div class="timeline-role">Warehouse Manager - Reorganización</div>
+              <div class="timeline-meta">Ronnefeldt World of Tea | Dublin</div>
             </div>
-            <div class="timeline-date">
-              <span class="lang lang-es">Noviembre 2024 – Actualidad</span>
-              <span class="lang lang-en">November 2024 – Present</span>
-            </div>
+            <div class="timeline-date">Oct 2024 – Dic 2025</div>
             <ul class="timeline-bullets">
               <li>
-                <span class="lang lang-es">
-                  Implementación de un nuevo sistema de bin locations, mejorando la organización y eficiencia del almacén.
-                </span>
-                <span class="lang lang-en">
-                  Implemented a new bin location system, significantly improving warehouse organization and efficiency.
-                </span>
+                <span class="lang lang-es">Responsable de la fiabilidad operativa y precisión de inventario en empresa de distribución premium con canal e-commerce.</span>
+                <span class="lang lang-en">Responsible for operational reliability and inventory accuracy in premium distribution company with e-commerce channel.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Automatización de procesos de preparación y cumplimiento de pedidos, reduciendo tiempos de ciclo.
-                </span>
-                <span class="lang lang-en">
-                  Automated fulfillment processes, streamlining operations and reducing processing time.
-                </span>
+                <span class="lang lang-es">Diseño e implantación integral del sistema Bin Location, logrando una reducción del 50% en los tiempos de picking y optimizando las rutas de extracción en el almacén.</span>
+                <span class="lang lang-en">Design and implementation of Bin Location system, achieving 50% reduction in picking times and optimizing warehouse extraction routes.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Coordinación del departamento IT vinculado a la operación, asegurando una integración tecnológica fluida.
-                </span>
-                <span class="lang lang-en">
-                  Managed the IT department related to warehouse operations, ensuring seamless technology integration.
-                </span>
+                <span class="lang lang-es">Sincronización entre stock físico y Shopify, eliminando discrepancias que afectaban ventas online.</span>
+                <span class="lang lang-en">Synchronization between physical stock and Shopify, eliminating discrepancies that affected online sales.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Gestión integral de inventarios y flujos de recepción, almacenamiento y expedición.
-                </span>
-                <span class="lang lang-en">
-                  Oversaw inventory management and coordinated product receipt, storage and dispatch.
-                </span>
+                <span class="lang lang-es">Rediseño integral de flujos de recepción, almacenaje y expedición.</span>
+                <span class="lang lang-en">Complete redesign of receiving, storage, and dispatch workflows.</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Creación de procedimientos de control que elevaron significativamente la trazabilidad y precisión del inventario.</span>
+                <span class="lang lang-en">Development of control procedures that significantly improved traceability and inventory accuracy.</span>
               </li>
             </ul>
           </div>
 
-          <!-- Kuehne+Nagel x Amazon -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-header">
-              <div class="timeline-role">
-                <span class="lang lang-es">Warehouse Operations Specialist</span>
-                <span class="lang lang-en">Warehouse Operations Specialist</span>
-              </div>
-              <div class="timeline-meta">
-                Kuehne+Nagel x Amazon · Spain
-              </div>
+              <div class="timeline-role">Stock Controller (Weekend Role)</div>
+              <div class="timeline-meta">Masterlink | Dublin</div>
             </div>
-            <div class="timeline-date">
-              <span class="lang lang-es">Julio 2016 – Marzo 2023</span>
-              <span class="lang lang-en">July 2016 – March 2023</span>
-            </div>
+            <div class="timeline-date">Feb 2025 – Ago 2025</div>
             <ul class="timeline-bullets">
               <li>
-                <span class="lang lang-es">
-                  Gestión de la recepción, verificación y clasificación de mercancía entrante.
-                </span>
-                <span class="lang lang-en">
-                  Managed receipt, verification and categorization of incoming goods.
-                </span>
+                <span class="lang lang-es">Ejecución de conteos cíclicos estratégicos para detección temprana de desviaciones de inventario.</span>
+                <span class="lang lang-en">Execution of strategic cycle counts for early detection of inventory deviations.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Colaboración con equipos multidisciplinares para mantener inventarios precisos y actualizados.
-                </span>
-                <span class="lang lang-en">
-                  Collaborated with cross-functional teams to maintain accurate and up-to-date inventory records.
-                </span>
+                <span class="lang lang-es">Resolución de incidencias antes del reinicio de operativa semanal.</span>
+                <span class="lang lang-en">Resolution of incidents before weekly operations restart.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Coordinación de la preparación de productos para almacenamiento, empaquetado y envío.
-                </span>
-                <span class="lang lang-en">
-                  Coordinated product preparation for storage, packaging and shipment.
-                </span>
-              </li>
-              <li>
-                <span class="lang lang-es">
-                  Resolución de incidencias de almacenamiento y distribución en operaciones de alto volumen.
-                </span>
-                <span class="lang lang-en">
-                  Resolved storage and distribution issues in high-volume operations.
-                </span>
+                <span class="lang lang-es">Garantía de trazabilidad y control de rotación de inventario en entorno de alto volumen.</span>
+                <span class="lang lang-en">Ensuring traceability and inventory rotation control in high-volume environments.</span>
               </li>
             </ul>
           </div>
 
-          <!-- Manpower x Ingram Micro -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-header">
-              <div class="timeline-role">
-                <span class="lang lang-es">Picking Specialist</span>
-                <span class="lang lang-en">Picking Specialist</span>
-              </div>
-              <div class="timeline-meta">
-                Manpower Business Solutions x Ingram Micro · Spain
-              </div>
+              <div class="timeline-role">Problem Solver & Concessions Specialist</div>
+              <div class="timeline-meta">Kuehne+Nagel (Amazon 3PL) | Constantí</div>
             </div>
-            <div class="timeline-date">
-              <span class="lang lang-es">Agosto 2008 – Noviembre 2011</span>
-              <span class="lang lang-en">August 2008 – November 2011</span>
-            </div>
+            <div class="timeline-date">Jul 2018 – Mar 2023</div>
             <ul class="timeline-bullets">
               <li>
-                <span class="lang lang-es">
-                  Preparación de pedidos (picking & packing) según especificaciones del cliente.
-                </span>
-                <span class="lang lang-en">
-                  Prepared orders (picking & packing) according to customer specifications.
-                </span>
+                <span class="lang lang-es">Resolución de incidencias críticas, muchas capaces de bloquear decenas de pedidos.</span>
+                <span class="lang lang-en">Resolution of critical incidents, many capable of blocking dozens of orders.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Operación de carretillas elevadoras y transpaletas para la manipulación segura de cargas.
-                </span>
-                <span class="lang lang-en">
-                  Operated forklifts and pallet jacks for safe handling of goods.
-                </span>
+                <span class="lang lang-es">Aplicación sistemática de Root Cause Analysis (RCA) para eliminar fallos recurrentes de inventario y proceso.</span>
+                <span class="lang lang-en">Systematic application of Root Cause Analysis (RCA) to eliminate recurring inventory and process failures.</span>
               </li>
               <li>
-                <span class="lang lang-es">
-                  Reorganización del espacio de almacén para mejorar flujos y utilización de capacidad.
-                </span>
-                <span class="lang lang-en">
-                  Reorganized warehouse space to improve flows and capacity utilization.
-                </span>
+                <span class="lang lang-es">Gestión de incidencias por pérdidas y daños (Concessions), minimizando el impacto operativo y económico.</span>
+                <span class="lang lang-en">Management of loss and damage incidents (Concessions), minimizing operational and financial impact.</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Trabajo bajo KPIs estrictos de precisión, calidad y tiempos en entorno de altísima exigencia.</span>
+                <span class="lang lang-en">Work under strict KPIs for accuracy, quality and timing in highly demanding environments.</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Colaboración transversal para eliminación de cuellos de botella operativos.</span>
+                <span class="lang lang-en">Cross-functional collaboration to remove operational bottlenecks.</span>
               </li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ========= EDUCATION ========= -->
+    <!-- EDUCATION -->
     <section id="education" class="reveal">
       <h2 class="section-title">
-        <span class="lang lang-es">Educación y certificaciones</span>
-        <span class="lang lang-en">Education & certifications</span>
+        <span class="lang lang-es">Formación relevante</span>
+        <span class="lang lang-en">Education</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Formación técnica y actualización constante</span>
-        <span class="lang lang-en">Technical training & continuous upskilling</span>
-      </p>
       <div class="section-divider"></div>
 
       <div class="glass-card">
         <div class="edu-grid">
           <div class="edu-item">
             <div class="edu-title">
-              <span class="lang lang-es">Logística y Gestión de Almacenes</span>
-              <span class="lang lang-en">Logistics and Warehouse Management</span>
+              <span class="lang lang-es">Máster en IA aplicada a Compras y Supply Chain</span>
+              <span class="lang lang-en">Master’s in AI applied to Procurement & Supply Chain</span>
             </div>
-            <div class="edu-meta">
-              Spain · 2018
-            </div>
-            <p>
-              <span class="lang lang-es">
-                Especialización en organización de almacenes, flujos de entrada y salida, y control de inventarios.
-              </span>
-              <span class="lang lang-en">
-                Specialization in warehouse organization, inbound/outbound flows and inventory control.
-              </span>
-            </p>
+            <div class="edu-meta">Founderz | <span class="lang lang-es">En curso</span><span class="lang lang-en">In progress</span></div>
           </div>
-
           <div class="edu-item">
             <div class="edu-title">
-              <span class="lang lang-es">Técnico en Control de Calidad</span>
-              <span class="lang lang-en">Quality Control Technician</span>
+              <span class="lang lang-es">Gestión y Organización de Almacenes (Certificado Profesionalidad)</span>
+              <span class="lang lang-en">Warehouse Management & Organization (Professional Certificate)</span>
             </div>
-            <div class="edu-meta">
-              Spain · 2009
-            </div>
-            <p>
-              <span class="lang lang-es">
-                Bases de control de calidad, trazabilidad y procedimientos estandarizados aplicados a la logística.
-              </span>
-              <span class="lang lang-en">
-                Fundamentals of quality control, traceability and standardized procedures applied to logistics.
-              </span>
-            </p>
+            <div class="edu-meta">SOC | 2024</div>
           </div>
-
           <div class="edu-item">
-            <div class="edu-title">
-              Master online AI en Procurement & Supply Chain · Cursando actualmente
-            </div>
-            <div class="edu-meta">
-              Founderz · Online · In progress
-            </div>
-            <p>
-              <span class="lang lang-es">
-                Uso de SQL para análisis de datos y apoyo a decisiones en operaciones logísticas.
-              </span>
-              <span class="lang lang-en">
-                Using SQL for data analysis and decision support in logistics operations.
-              </span>
-            </p>
-          </div>
-
-          <div class="edu-item">
-            <div class="edu-title">
-              Web Development with Python
-            </div>
-            <div class="edu-meta">
-              IBM SkillsBuild · Online · 2024
-            </div>
-            <p>
-              <span class="lang lang-es">
-                Bases de desarrollo web con Python aplicables a herramientas internas y dashboards operativos.
-              </span>
-              <span class="lang lang-en">
-                Web development fundamentals with Python, applicable to internal tools and operational dashboards.
-              </span>
-            </p>
+            <div class="edu-title">Web Development with Python</div>
+            <div class="edu-meta">IBM SkillsBuild | 2024</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========= SKILLS ========= -->
+    <!-- SKILLS -->
     <section id="skills" class="reveal">
       <h2 class="section-title">
-        <span class="lang lang-es">Habilidades técnicas</span>
-        <span class="lang lang-en">Technical skills</span>
+        <span class="lang lang-es">Habilidades e Idiomas</span>
+        <span class="lang lang-en">Skills & Languages</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Operación, tecnología y trabajo en equipo</span>
-        <span class="lang lang-en">Operations, technology & teamwork</span>
-      </p>
       <div class="section-divider"></div>
 
       <div class="glass-card">
         <div class="skills-grid">
-          <!-- Operaciones -->
           <div>
             <div class="skill-column-title">
-              <span class="lang lang-es">Operaciones de almacén</span>
-              <span class="lang lang-en">Warehouse operations</span>
+              <span class="lang lang-es">Competencias clave</span>
+              <span class="lang lang-en">Core Skills</span>
             </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Gestión de inventarios</span>
-                  <span class="lang lang-en">Inventory management</span>
-                </span>
-                <span>90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="90"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Recepción & expedición</span>
-                  <span class="lang lang-en">Inbound & outbound</span>
-                </span>
-                <span>88%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="88"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Optimización de layout</span>
-                  <span class="lang lang-en">Layout optimization</span>
-                </span>
-                <span>85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="85"></div>
-              </div>
-            </div>
+            <ul class="muted-text">
+              <li>
+                <span class="lang lang-es">Root Cause Analysis (RCA) aplicado a incidencias operativas</span>
+                <span class="lang lang-en">Root Cause Analysis (RCA) applied to operational incidents</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Optimización de layouts y sistemas de ubicación (Bin Location)</span>
+                <span class="lang lang-en">Layout optimization and bin-location systems</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Control y precisión de inventario (cycle counting, detección de desviaciones)</span>
+                <span class="lang lang-en">Inventory control and accuracy (cycle counting, deviation detection)</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Seguimiento y análisis de KPIs operativos</span>
+                <span class="lang lang-en">Tracking and analysis of operational KPIs</span>
+              </li>
+              <li>
+                <span class="lang lang-es">Toma de decisiones basada en datos (SQL en formación)</span>
+                <span class="lang lang-en">Data-driven decision making (SQL in progress)</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Tecnología -->
           <div>
             <div class="skill-column-title">
-              <span class="lang lang-es">Tecnología & automatización</span>
-              <span class="lang lang-en">Technology & automation</span>
+              <span class="lang lang-es">Idiomas</span>
+              <span class="lang lang-en">Languages</span>
             </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Sistemas SGA & WMS</span>
-                  <span class="lang lang-en">WMS & warehouse systems</span>
-                </span>
-                <span>85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="85"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Automatización de procesos</span>
-                  <span class="lang lang-en">Process automation</span>
-                </span>
-                <span>80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="80"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>SQL & Data</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="70"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Soft skills -->
-          <div>
-            <div class="skill-column-title">
-              <span class="lang lang-es">Gestión & soft skills</span>
-              <span class="lang lang-en">Management & soft skills</span>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Liderazgo de equipos</span>
-                  <span class="lang lang-en">Team leadership</span>
-                </span>
-                <span>85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="85"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Resolución de problemas</span>
-                  <span class="lang lang-en">Problem-solving</span>
-                </span>
-                <span>88%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="88"></div>
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">
-                <span>
-                  <span class="lang lang-es">Trabajo bajo presión</span>
-                  <span class="lang lang-en">Working under pressure</span>
-                </span>
-                <span>90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" data-skill="90"></div>
-              </div>
-            </div>
+            <ul class="muted-text">
+              <li><strong><span class="lang lang-es">Español</span><span class="lang lang-en">Spanish</span>:</strong> <span class="lang lang-es">Nativo</span><span class="lang lang-en">Native</span></li>
+              <li><strong><span class="lang lang-es">Inglés</span><span class="lang lang-en">English</span>:</strong> <span class="lang lang-es">Profesional (entorno laboral internacional)</span><span class="lang lang-en">Professional (international work environment)</span></li>
+              <li><strong>Català:</strong> <span class="lang lang-es">Comprensión oral y lectora</span><span class="lang lang-en">Oral and reading comprehension</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========= PROJECTS / HIGHLIGHTS ========= -->
+    <!-- HIGHLIGHTS -->
     <section id="projects" class="reveal">
       <h2 class="section-title">
-        <span class="lang lang-es">Proyectos destacados & logros</span>
-        <span class="lang lang-en">Key projects & achievements</span>
+        <span class="lang lang-es">Logros</span>
+        <span class="lang lang-en">Highlights</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Impacto medible en operaciones logísticas</span>
-        <span class="lang lang-en">Measurable impact in logistics operations</span>
-      </p>
       <div class="section-divider"></div>
 
-      <div class="glass-card">
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-tag">
-              <span class="lang lang-es">Optimización de almacén</span>
-              <span class="lang lang-en">Warehouse optimisation</span>
-            </div>
-            <h3 class="project-title">
-              <span class="lang lang-es">Nuevo sistema de bin locations</span>
-              <span class="lang lang-en">New bin location system</span>
-            </h3>
-            <div class="project-meta">Ronnefeldt World of Tea · Ireland</div>
-            <p>
-              <span class="lang lang-es">
-                Diseño e implementación de un sistema avanzado de ubicaciones que mejoró la visibilidad de inventario,
-                redujo desplazamientos internos y facilitó la formación de nuevos miembros del equipo.
-              </span>
-              <span class="lang lang-en">
-                Designed and implemented an advanced bin location system that improved inventory visibility, reduced
-                internal travel time and simplified onboarding for new team members.
-              </span>
-            </p>
-          </article>
+      <div class="highlights-grid">
+        <div class="glass-card highlight-card">
+          <div class="highlight-icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></div>
+          <h3 class="card-title">
+            <span class="lang lang-es">Optimización de tiempos operativos</span>
+            <span class="lang lang-en">Operational time optimization</span>
+          </h3>
+          <p class="muted-text">
+            <span class="lang lang-es">Reducción significativa en tiempos de búsqueda y picking mediante rediseño estructurado de ubicaciones.</span>
+            <span class="lang lang-en">Significant reduction in search and picking times through structured bin-location redesign.</span>
+          </p>
+        </div>
 
-          <article class="project-card">
-            <div class="project-tag">
-              <span class="lang lang-es">Automatización & IT</span>
-              <span class="lang lang-en">Automation & IT</span>
-            </div>
-            <h3 class="project-title">
-              <span class="lang lang-es">Automatización del cumplimiento de pedidos</span>
-              <span class="lang lang-en">Automated fulfillment workflows</span>
-            </h3>
-            <div class="project-meta">Ronnefeldt World of Tea · Ireland</div>
-            <p>
-              <span class="lang lang-es">
-                Automatización de procesos de preparación y empaquetado mediante integración de sistemas IT, reduciendo
-                tiempos de procesamiento y errores en la expedición.
-              </span>
-              <span class="lang lang-en">
-                Automated picking and packing workflows by integrating IT systems, reducing processing time and
-                shipment errors.
-              </span>
-            </p>
-          </article>
+        <div class="glass-card highlight-card">
+          <div class="highlight-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+          <h3 class="card-title">
+            <span class="lang lang-es">Fiabilidad en entornos exigentes</span>
+            <span class="lang lang-en">Reliability in demanding environments</span>
+          </h3>
+          <p class="muted-text">
+            <span class="lang lang-es">Rendimiento constante bajo presión en operaciones con métricas estrictas y alto volumen.</span>
+            <span class="lang lang-en">Consistent performance under pressure in operations with strict metrics and high volume.</span>
+          </p>
+        </div>
 
-          <article class="project-card">
-            <div class="project-tag">
-              <span class="lang lang-es">Operaciones de gran volumen</span>
-              <span class="lang lang-en">High-volume operations</span>
-            </div>
-            <h3 class="project-title">
-              <span class="lang lang-es">Soporte a cadena de suministro Amazon</span>
-              <span class="lang lang-en">Supporting Amazon supply chain</span>
-            </h3>
-            <div class="project-meta">Kuehne+Nagel x Amazon · Spain</div>
-            <p>
-              <span class="lang lang-es">
-                Participación directa en la preparación de pedidos y gestión de stocks para una de las cadenas de
-                suministro más exigentes del mundo, manteniendo altos estándares de calidad y puntualidad.
-              </span>
-              <span class="lang lang-en">
-                Direct involvement in order preparation and stock management for one of the most demanding supply
-                chains worldwide, maintaining high standards of quality and on-time performance.
-              </span>
-            </p>
-          </article>
+        <div class="glass-card highlight-card">
+          <div class="highlight-icon"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i></div>
+          <h3 class="card-title">
+            <span class="lang lang-es">Control a través de datos</span>
+            <span class="lang lang-en">Control through data</span>
+          </h3>
+          <p class="muted-text">
+            <span class="lang lang-es">Uso sistemático de KPIs y análisis para anticipar errores y mejorar la precisión de inventario.</span>
+            <span class="lang lang-en">Systematic use of KPIs and analysis to anticipate errors and improve inventory accuracy.</span>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ========= CONTACT ========= -->
+    <!-- CONTACT -->
     <section id="contact" class="reveal">
       <h2 class="section-title">
         <span class="lang lang-es">Contacto</span>
         <span class="lang lang-en">Contact</span>
       </h2>
-      <p class="section-subtitle">
-        <span class="lang lang-es">Hablemos de tu cadena de suministro</span>
-        <span class="lang lang-en">Let’s talk about your supply chain</span>
-      </p>
-      <div class="section-divider"></div>
 
       <div class="glass-card">
         <div class="contact-layout">
           <div class="contact-info-block">
-            <p class="muted-text" style="margin-bottom:1.4rem;">
-              <span class="lang lang-es">
-                Estoy abierto a oportunidades laborales, proyectos de optimización de almacén y roles donde pueda
-                aportar mi experiencia en logística, automatización y gestión de equipos.
-              </span>
-              <span class="lang lang-en">
-                I am open to new opportunities, warehouse optimisation projects and roles where I can contribute my
-                experience in logistics, automation and team management.
-              </span>
-            </p>
-
             <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
               <div>
                 <div class="contact-label">Email</div>
-                <div class="contact-value">yezid@adarme.es</div>
+                <div class="contact-value"><a href="mailto:yezid@adarme.es" target="_blank" rel="noopener">yezid@adarme.es</a></div>
               </div>
             </div>
 
             <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-item-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
               <div>
-                <div class="contact-label">
-                  <span class="lang lang-es">Teléfono</span>
-                  <span class="lang lang-en">Phone</span>
-                </div>
-                <div class="contact-value">+34 646 442 497</div>
+                <div class="contact-label"><span class="lang lang-es">Teléfono</span><span class="lang lang-en">Phone</span></div>
+                <div class="contact-value"><a href="tel:+34646442497">+34 646 442 497</a></div>
               </div>
             </div>
 
             <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="contact-item-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
               <div>
-                <div class="contact-label">
-                  <span class="lang lang-es">Ubicación actual</span>
-                  <span class="lang lang-en">Current location</span>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">
+                  <a href="https://www.linkedin.com/in/yezidadarme/" target="_blank" rel="noopener">https://www.linkedin.com/in/yezidadarme/</a>
                 </div>
-                <div class="contact-value">9 Milltown Road, Ashbourne, Co. Meath, A84 KA97 · Ireland</div>
               </div>
             </div>
 
-            <div class="social-links">
-              <a href="mailto:yezid@adarme.es" aria-label="Email"><i class="fas fa-envelope"></i></a>
-              <!-- Pon aquí tu URL real de LinkedIn -->
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
           </div>
 
-          <form class="contact-form" action="mailto:yezid@adarme.es" method="post" enctype="text/plain">
-            <div class="form-row">
-              <label for="name">
-                <span class="lang lang-es">Nombre</span>
-                <span class="lang lang-en">Name</span>
-              </label>
-              <input id="name" name="name" type="text" required>
-            </div>
 
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required>
-            </div>
-
-            <div class="form-row">
-              <label for="subject">
-                <span class="lang lang-es">Asunto</span>
-                <span class="lang lang-en">Subject</span>
-              </label>
-              <input id="subject" name="subject" type="text">
-            </div>
-
-            <div class="form-row">
-              <label for="message">
-                <span class="lang lang-es">Mensaje</span>
-                <span class="lang lang-en">Message</span>
-              </label>
-              <textarea id="message" name="message" required></textarea>
-              <p class="form-note">
-                <span class="lang lang-es">Este formulario utiliza mailto para abrir tu cliente de correo.</span>
-                <span class="lang lang-en">This form uses mailto to open your email client.</span>
-              </p>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="margin-top:0.3rem;">
-              <i class="fas fa-paper-plane"></i>
-              <span class="lang lang-es">Enviar mensaje</span>
-              <span class="lang lang-en">Send message</span>
-            </button>
-          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ========= FOOTER ========= -->
-  <footer>
-    <span>© <script>document.write(new Date().getFullYear())</script> · Yezid Adarme</span>
-    <span>
-      <span class="lang lang-es">Diseño personal de portafolio logístico.</span>
-      <span class="lang lang-en">Personal portfolio for logistics career.</span>
-    </span>
+  <footer class="footer">
+    <span>© <span id="year"></span> · Yezid Adarme</span>
   </footer>
 
-  <!-- ========= JS EXTERNO ========= -->
   <script src="main.js"></script>
 </body>
 </html>

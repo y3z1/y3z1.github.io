@@ -24,7 +24,9 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px; /* ajusta según tu header */
 }
+
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -53,22 +55,21 @@ h1, h2, h3, h4 {
   letter-spacing: 0.04em;
 }
 
-/* ---------- LENGUAJES ---------- */
-.lang {
-  display: inline;
-}
+/* ---------- LENGUAJES (FINAL) ---------- */
+.lang { display: inline-block; }
+.lang-es { display: inline-block; }
+.lang-en { display: none !important; }
 
-.lang-en {
-  display: none;
-}
+html[data-lang="en"] .lang-es { display: none !important; }
+html[data-lang="en"] .lang-en { display: inline-block !important; }
 
-html[data-lang="en"] .lang-es {
-  display: none;
-}
+/* Botón ES/EN - estados consistentes */
+.lang-toggle .label-es { opacity: 1; }
+.lang-toggle .label-en { opacity: 0.55; }
 
-html[data-lang="en"] .lang-en {
-  display: inline;
-}
+.lang-toggle[data-lang="en"] .label-es { opacity: 0.55; }
+.lang-toggle[data-lang="en"] .label-en { opacity: 1; }
+
 
 /* ---------- LAYOUT GENERAL ---------- */
 .page {
@@ -150,6 +151,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.18em;
   color: #f5f7fa;
+  white-space: nowrap;
 }
 
 .logo-role {
@@ -178,6 +180,7 @@ section {
   color: #d1d9e6;
   cursor: pointer;
   padding-bottom: 0.2rem;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -319,6 +322,15 @@ section {
   margin-bottom: 2rem;
 }
 
+.hero-strategic-note {
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: #a0aec0;
+  margin-bottom: 2rem;
+  max-width: 34rem;
+}
+
 .pill {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -402,19 +414,24 @@ section {
   padding: 2rem 1.6rem;
   border-radius: 22px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(17,24,39,0.95), rgba(15,23,42,0.99)),
-              url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=70")
-              center/cover no-repeat;
+
+  background:
+    linear-gradient(to bottom right, rgba(7,12,20,0.88), rgba(7,12,20,0.92)),
+    url("assets/img/Estanterias.png") center center / contain no-repeat;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.55);
 }
+
 
 .hero-visual-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.32), transparent 60%),
-              linear-gradient(to bottom right, rgba(15,23,42,0.8), rgba(15,23,42,0.95));
-  mix-blend-mode: soft-light;
+  background:
+    radial-gradient(circle at center, rgba(74,163,255,0.25), transparent 60%),
+    linear-gradient(to bottom, rgba(7,12,20,0.2), rgba(7,12,20,0.75));
   pointer-events: none;
 }
+
 
 .hero-stat-grid {
   position: relative;
@@ -464,8 +481,8 @@ section {
 }
 
 .hero-avatar {
-  width: 54px;
-  height: 54px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 2px solid rgba(148, 208, 255, 0.8);
   overflow: hidden;
