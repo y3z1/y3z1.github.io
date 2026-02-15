@@ -420,6 +420,10 @@ section {
     url("assets/img/Estanterias.png") center center / contain no-repeat;
 
   box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 
@@ -435,11 +439,12 @@ section {
 
 .hero-stat-grid {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   color: #e2e8f0;
   z-index: 1;
+  order: 2;
 }
 
 .hero-stat {
@@ -472,32 +477,35 @@ section {
 }
 
 .hero-profile {
-  margin-top: 1.6rem;
+  margin-top: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
   z-index: 1;
   position: relative;
+  order: 1;
 }
 
 .hero-avatar {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid rgba(148, 208, 255, 0.8);
   overflow: hidden;
   filter: grayscale(25%);
+  flex-shrink: 0;
 }
 
 .hero-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
 }
 
 .hero-profile-text {
-  font-size: 0.8rem;
-  color: #d1d5db;
+  display: none;
 }
 
 .hero-profile-text span {
@@ -516,6 +524,17 @@ section {
   }
   .hero-visual {
     order: -1;
+  }
+  .hero-visual-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: row;
+    order: auto;
+  }
+  .hero-profile {
+    order: auto;
   }
   .header-inner {
     padding-inline: 1rem;
