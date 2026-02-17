@@ -417,9 +417,9 @@ section {
 
   background:
     linear-gradient(to bottom right, rgba(7,12,20,0.88), rgba(7,12,20,0.92)),
-    url("assets/img/Estanterias.png") center center / contain no-repeat;
+    url("assets/img/Banner.png") center center / contain no-repeat;
 
-  box-shadow: 0 25px 60px rgba(0,0,0,0.55);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.55);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
