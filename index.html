@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adarme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f9f9f7;
+    --text: #1c1c1a;
+    --muted: #c0beb8;
+    --ring: #e2e1dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111110;
+      --text: #eeecea;
+      --muted: #3a3a38;
+      --ring: #252523;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    cursor: none;
+  }
+
+  #cur {
+    position: fixed;
+    width: 5px; height: 5px;
+    background: var(--text);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  #cur.on { transform: translate(-50%,-50%) scale(7); opacity: 0.05; }
+
+  /* wordmark */
+  .wordmark {
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--muted);
+    position: fixed;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    animation: fade 1s ease 0.1s forwards;
+  }
+
+  /* bubbles */
+  .stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  .bubble {
+    width: clamp(110px, 18vw, 150px);
+    height: clamp(110px, 18vw, 150px);
+    border-radius: 50%;
+    border: 1px solid var(--ring);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: none;
+    position: relative;
+    transition: border-color 0.3s ease;
+    opacity: 0;
+  }
+
+  .bubble:nth-child(1) { animation: show 0.9s ease 0.2s forwards, f0 5.5s ease-in-out 1.1s infinite; }
+  .bubble:nth-child(2) { animation: show 0.9s ease 0.35s forwards, f1 6.4s ease-in-out 1.25s infinite; }
+  .bubble:nth-child(3) { animation: show 0.9s ease 0.5s forwards, f2 5.9s ease-in-out 1.4s infinite; }
+  .bubble:nth-child(4) { animation: show 0.9s ease 0.65s forwards, f3 7.1s ease-in-out 1.55s infinite; }
+
+  .bubble:hover { border-color: var(--muted); }
+  .bubble:hover .name { color: var(--text); }
+  .bubble:hover { animation-play-state: paused; }
+
+  .name {
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+
+  /* float keyframes */
+  @keyframes f0 { 0%,100%{transform:translateY(0)}    50%{transform:translateY(-12px)} }
+  @keyframes f1 { 0%,100%{transform:translateY(-9px)} 50%{transform:translateY(0)} }
+  @keyframes f2 { 0%,100%{transform:translateY(-5px)} 50%{transform:translateY(-13px)} }
+  @keyframes f3 { 0%,100%{transform:translateY(-10px)} 50%{transform:translateY(-2px)} }
+
+  @keyframes show {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade {
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 500px) {
+    #cur { display: none; }
+    body { cursor: auto; }
+    .bubble { cursor: pointer; }
+    .stage { gap: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<span class="wordmark">Adarme</span>
+
+<div class="stage">
+  <a href="./yezid/index.html"   class="bubble"><span class="name">Yezid</span></a>
+  <a href="./elkin/index.html"   class="bubble"><span class="name">Elkin</span></a>
+  <a href="./ivan/index.html"    class="bubble"><span class="name">Ivan</span></a>
+  <a href="./jessica/index.html" class="bubble"><span class="name">Jessica</span></a>
+</div>
+
+<script>
+  const cur = document.getElementById('cur');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function loop() {
+    rx += (mx - rx) * 0.13;
+    ry += (my - ry) * 0.13;
+    cur.style.left = rx + 'px';
+    cur.style.top  = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('.bubble').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.classList.add('on'));
+    el.addEventListener('mouseleave', () => cur.classList.remove('on'));
+  });
+</script>
+</body>
+</html>
