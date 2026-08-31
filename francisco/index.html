@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="E. Francisco Adarme — profesor de inglés, música y español. Certificaciones TEFL y TKT. Experiencia docente en Colombia y China. Tarragona, España.">
+<meta name="author" content="E. Francisco Adarme">
+<meta name="theme-color" content="#211F1C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='4' width='7.5' height='24' rx='2' fill='%23211F1C'/%3E%3Crect x='10.2' y='4' width='7.5' height='24' rx='2' fill='%23211F1C'/%3E%3Crect x='19.4' y='4' width='7.5' height='24' rx='2' fill='%23B5502A'/%3E%3Crect x='6.2' y='4' width='4.4' height='14' rx='1.4' fill='%23211F1C'/%3E%3Crect x='15.4' y='4' width='4.4' height='14' rx='1.4' fill='%23211F1C'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="E. Francisco Adarme — Profesor de Inglés, Música y Español">
+<meta property="og:description" content="Certificaciones TEFL y TKT. Experiencia docente en Colombia y China. Basado en Santa Oliva, Tarragona.">
+<meta property="og:locale" content="es_ES">
+
+<title>E. Francisco Adarme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<style>
+:root{
+  color-scheme: light;
+  --paper:#FBF8F3;
+  --paper-2:#F5EEE4;
+  --card:#FFFDFA;
+  --band:#211F1C;
+  --band-2:#2C2925;
+  --ink:#1F1A15;
+  --ink-2:#4A423A;
+  --muted:#6D6357;
+  --accent:#B5502A;
+  --accent-2:#8E3D1F;
+  --accent-soft:#F0DCCE;
+  --on-band:#EFE9E1;
+  --on-band-2:#C3B9AC;
+  --accent-on-band:#E6A07C;
+  --rule:#E4DACC;
+  --shadow:0 1px 2px rgba(33,31,28,.05), 0 8px 24px -12px rgba(33,31,28,.18);
+  --shadow-lg:0 2px 6px rgba(33,31,28,.06), 0 24px 48px -20px rgba(33,31,28,.28);
+  --r-sm:10px; --r:16px; --r-lg:24px; --r-pill:999px;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+  --sp-6:32px; --sp-7:48px; --sp-8:64px; --sp-9:88px;
+  --ease-out:cubic-bezier(.16,.84,.44,1);
+  --ease-in:cubic-bezier(.55,0,.9,.35);
+  --spring:cubic-bezier(.34,1.4,.5,1);
+  --t-enter:280ms; --t-exit:180ms; --t-micro:180ms;
+  --maxw:1080px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; min-height:100vh; display:flex; flex-direction:column;
+  background:var(--paper); color:var(--ink);
+  font-family:"Alegreya Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{margin:0; line-height:1.15;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+a{color:inherit;}
+img{max-width:100%; display:block;}
+:focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:6px;}
+.view:focus,.view:focus-visible{outline:none;}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(20px,5vw,40px);}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--accent);color:#fff;
+  padding:10px 16px;border-radius:var(--r-sm);font-weight:700;}
+.skip:focus{left:16px;}
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(251,248,243,.86);
+  backdrop-filter:saturate(150%) blur(14px);
+  -webkit-backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid var(--rule);
+}
+.topbar .wrap{display:flex; align-items:center; gap:var(--sp-5); min-height:64px;}
+.brand{display:flex; align-items:center; gap:10px; font-family:"Vollkorn",Georgia,serif;
+  font-weight:700; font-size:20px; letter-spacing:-.01em; white-space:nowrap;}
+.brand .mark{width:30px;height:30px;flex:0 0 auto;}
+.brand .mark .k{fill:var(--band);} .brand .mark .a{fill:var(--accent);}
+
+nav.tabs{margin-left:auto; position:relative; display:flex; gap:2px;
+  overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;}
+nav.tabs::-webkit-scrollbar{display:none;}
+@media (max-width:860px){
+  nav.tabs{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);
+           mask-image:linear-gradient(90deg,#000 88%,transparent);}
+}
+.tab{
+  appearance:none; border:0; background:none; cursor:pointer;
+  font:inherit; font-weight:600; font-size:15.5px; color:var(--muted);
+  padding:12px 14px; min-height:48px; border-radius:var(--r-sm);
+  position:relative; white-space:nowrap;
+  transition:color var(--t-micro) var(--ease-out), background var(--t-micro) var(--ease-out);
+}
+.tab:hover{color:var(--ink); background:var(--paper-2);}
+.tab[aria-selected="true"]{color:var(--accent-2);}
+.tab:active{transform:scale(.97);}
+.pill{
+  position:absolute; bottom:5px; left:0; height:7px; width:0;
+  background:var(--accent); border-radius:0 0 3px 3px; pointer-events:none;
+  transition:transform 320ms var(--spring), width 320ms var(--spring);
+  will-change:transform,width;
+}
+
+.stage{position:relative; flex:1;}
+.view{display:none;}
+.view.is-active{display:block;}
+.view.enter{animation:viewIn var(--t-enter) var(--ease-out) both;}
+.view.enter-back{animation:viewInBack var(--t-enter) var(--ease-out) both;}
+@keyframes viewIn{from{opacity:0; transform:translate3d(22px,0,0);} to{opacity:1; transform:none;}}
+@keyframes viewInBack{from{opacity:0; transform:translate3d(-22px,0,0);} to{opacity:1; transform:none;}}
+
+.stagger>*{opacity:0; transform:translate3d(0,14px,0);}
+.view.is-active .stagger>*{animation:riseIn 420ms var(--ease-out) both;}
+.view.is-active .stagger>*:nth-child(1){animation-delay:60ms}
+.view.is-active .stagger>*:nth-child(2){animation-delay:100ms}
+.view.is-active .stagger>*:nth-child(3){animation-delay:140ms}
+.view.is-active .stagger>*:nth-child(4){animation-delay:180ms}
+.view.is-active .stagger>*:nth-child(5){animation-delay:220ms}
+.view.is-active .stagger>*:nth-child(6){animation-delay:260ms}
+.view.is-active .stagger>*:nth-child(7){animation-delay:300ms}
+.view.is-active .stagger>*:nth-child(8){animation-delay:340ms}
+.view.is-active .stagger>*:nth-child(n+9){animation-delay:380ms}
+@keyframes riseIn{to{opacity:1; transform:none;}}
+
+section.pad{padding:clamp(40px,7vw,72px) 0 clamp(56px,9vw,96px);}
+.eyebrow{font-size:13px; font-weight:800; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:10px;}
+.h-sec{font-family:"Vollkorn",Georgia,serif; font-weight:700;
+  font-size:clamp(30px,4.6vw,42px); letter-spacing:-.015em; margin-bottom:var(--sp-2);}
+.sub{color:var(--muted); font-size:17px; max-width:62ch; margin-bottom:var(--sp-6);}
+
+.hero{background:var(--band); color:var(--on-band); position:relative; overflow:hidden;}
+.hero::after{content:""; position:absolute; inset:auto 0 0 0; height:1px; background:rgba(230,160,124,.28);}
+.hero .glow{position:absolute; top:0; left:0; width:640px; height:640px; margin:-320px 0 0 -320px;
+  background:radial-gradient(circle, rgba(181,80,42,.34), rgba(181,80,42,0) 65%);
+  transform:translate3d(28vw,26vh,0); transition:transform 900ms cubic-bezier(.2,.7,.3,1);
+  pointer-events:none;}
+.hero .wrap{position:relative; padding-top:clamp(44px,7vw,76px); padding-bottom:clamp(16px,2.4vw,24px);}
+.hero h1{font-family:"Vollkorn",Georgia,serif; font-weight:700; color:#fff;
+  font-size:clamp(52px,11vw,118px); letter-spacing:-.035em; line-height:.9;
+  text-wrap:balance;}
+.hero h1 .given{font-weight:500; color:var(--on-band);}
+.view.is-active .hero h1 .given,
+.view.is-active .hero h1 br + *,
+.view.is-active .hero h1{animation:heroIn 700ms var(--ease-out) both;}
+@keyframes heroIn{from{opacity:0; transform:translate3d(0,26px,0);} to{opacity:1; transform:none;}}
+.hero .role{color:var(--accent-on-band); font-size:clamp(18px,2.6vw,26px);
+  letter-spacing:.03em; font-weight:500; margin-top:18px;
+  font-family:"Vollkorn",Georgia,serif; font-style:italic;}
+.rotator{display:inline-grid; vertical-align:bottom;}
+.rotator .word{grid-area:1/1; opacity:0; transform:translate3d(0,10px,0);
+  transition:opacity 320ms var(--ease-out), transform 320ms var(--ease-out);}
+.rotator .word.is-on{opacity:1; transform:none;}
+.rotator .word.is-out{opacity:0; transform:translate3d(0,-10px,0);}
+.hero .bio{color:var(--on-band-2); max-width:56ch; font-size:17.5px;}
+.hero-grid{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(28px,5vw,64px); margin-top:30px; align-items:start;}
+.facts{display:grid; grid-template-columns:1fr 1fr; gap:22px 24px; margin:0;}
+.fact{border-left:2px solid rgba(230,160,124,.34); padding-left:14px;}
+.fact .n{font-family:"Vollkorn",Georgia,serif; font-size:38px; font-weight:700;
+  color:var(--accent-on-band); line-height:1; font-variant-numeric:tabular-nums;}
+.fact .n.small{font-size:23px; letter-spacing:.01em;}
+.fact .l{margin:6px 0 0; font-size:14.5px; color:var(--on-band-2); line-height:1.35;}
+.fact .l span{color:#9C917F; font-size:13.5px;}
+.hero-cta{display:flex; flex-wrap:wrap; gap:var(--sp-3); margin-top:28px;}
+.btn{
+  display:inline-flex; align-items:center; gap:9px; min-height:48px;
+  padding:12px 22px; border-radius:var(--r-pill); font-weight:700; font-size:16px;
+  text-decoration:none; border:1px solid transparent; cursor:pointer; font-family:inherit;
+  transition:transform var(--t-micro) var(--ease-out), background var(--t-micro) var(--ease-out),
+             border-color var(--t-micro) var(--ease-out), color var(--t-micro) var(--ease-out);
+}
+.btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round;}
+.btn-primary{background:var(--accent); color:#fff;}
+.btn-primary:hover{background:#C2582F; transform:translateY(-2px);}
+.btn-ghost{border-color:rgba(239,233,225,.55); color:#fff; background:rgba(239,233,225,.06);}
+.btn-ghost:hover{border-color:var(--accent-on-band); background:rgba(230,160,124,.14); transform:translateY(-2px);}
+.btn:active{transform:scale(.97);}
+
+.stave{margin-top:26px; width:min(340px,80%); height:44px; overflow:visible;}
+.stave .line{stroke:rgba(239,233,225,.34); stroke-width:1;
+  stroke-dasharray:240; stroke-dashoffset:240;}
+.view.is-active .stave .line{animation:draw 900ms var(--ease-out) forwards;}
+.stave .line:nth-of-type(2){animation-delay:60ms}
+.stave .line:nth-of-type(3){animation-delay:120ms}
+.stave .line:nth-of-type(4){animation-delay:180ms}
+.stave .line:nth-of-type(5){animation-delay:240ms}
+@keyframes draw{to{stroke-dashoffset:0;}}
+.stave .note{fill:var(--accent-on-band); opacity:0; transform-box:fill-box; transform-origin:center;}
+.view.is-active .stave .note{animation:pop 420ms var(--spring) both;}
+.stave .n1{animation-delay:620ms} .stave .n2{animation-delay:720ms} .stave .n3{animation-delay:820ms}
+@keyframes pop{from{opacity:0; transform:translateY(6px) scale(.6);} to{opacity:1; transform:none;}}
+
+.kb-block{position:relative; margin-top:clamp(12px,2vw,20px);}
+.kb-head{display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding-bottom:10px;}
+.kb-hint{font-size:13px; font-weight:800; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--on-band-2);}
+.kb-play{display:inline-flex; align-items:center; gap:8px; min-height:44px; cursor:pointer;
+  font:inherit; font-weight:700; font-size:15px; color:var(--band);
+  background:var(--accent-on-band); border:0; border-radius:var(--r-pill); padding:9px 20px;
+  transition:transform var(--t-micro) var(--ease-out), background var(--t-micro) var(--ease-out);}
+.kb-play svg{width:17px;height:17px;fill:currentColor;}
+.kb-play:hover{background:#F2B993; transform:translateY(-2px);}
+.kb-play:active{transform:scale(.96);}
+.kb-play[data-playing="true"]{background:var(--accent); color:#fff;}
+
+.keys{position:relative; display:flex; width:100%; height:clamp(88px,13vw,132px);
+  border-top:1px solid rgba(230,160,124,.35); background:var(--band);}
+.keys .w{position:relative; flex:1 1 0; min-width:0; cursor:pointer; padding:0;
+  background:linear-gradient(#FFFDFA, #EFE7DA); border:0;
+  border-right:1px solid #211F1C; border-radius:0 0 4px 4px;
+  transform-origin:top; transition:transform 90ms var(--ease-out), filter 90ms var(--ease-out);}
+.keys .w:last-child{border-right:0;}
+.keys{--nk:14;}
+.keys .b{position:absolute; top:0; width:calc(100% / var(--nk) * 0.62); height:62%;
+  background:linear-gradient(#3A342E,#171513); border:0; border-radius:0 0 4px 4px;
+  cursor:pointer; padding:0; z-index:2; box-shadow:0 3px 6px rgba(0,0,0,.45);
+  transform-origin:top; transition:transform 90ms var(--ease-out), filter 90ms var(--ease-out);}
+.keys .w:hover{filter:brightness(.965);}
+.keys .b:hover{filter:brightness(1.5);}
+.keys .w.down{transform:scaleY(.975); filter:brightness(.9)
+  drop-shadow(0 0 0 transparent); background:linear-gradient(#F4D9C7,#E6A07C);}
+.keys .b.down{transform:scaleY(.965); background:linear-gradient(#C2582F,#8E3D1F);}
+.keys button:focus-visible{outline:3px solid var(--accent-on-band); outline-offset:-3px; z-index:3;}
+
+.filters{display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-6);}
+.fchip{
+  appearance:none; font:inherit; font-weight:600; font-size:15px; cursor:pointer;
+  min-height:44px; padding:9px 18px; border-radius:var(--r-pill);
+  border:1px solid var(--rule); background:var(--card); color:var(--ink-2);
+  transition:transform var(--t-micro) var(--ease-out), background var(--t-micro) var(--ease-out),
+             color var(--t-micro) var(--ease-out), border-color var(--t-micro) var(--ease-out);
+}
+.fchip:hover{border-color:var(--accent); color:var(--accent-2);}
+.fchip:active{transform:scale(.96);}
+.fchip[aria-pressed="true"]{background:var(--band); border-color:var(--band); color:#fff;}
+
+.grid{display:grid; gap:var(--sp-4);}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+.card{
+  background:var(--card); border:1px solid var(--rule); border-radius:var(--r);
+  padding:22px 24px 30px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  transition:transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out),
+             border-color 220ms var(--ease-out);
+}
+.card::before{content:""; position:absolute; left:24px; right:24px; bottom:14px; height:5px;
+  background:linear-gradient(var(--accent-soft) 1px, transparent 1px 4px, var(--accent-soft) 4px);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 300ms var(--ease-out);}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--accent-soft);}
+.card:hover::before{transform:scaleX(1);}
+.card .role{font-size:19px; font-weight:700; letter-spacing:-.01em;}
+.card .org{font-family:"Vollkorn",Georgia,serif; font-style:italic; color:var(--accent-2);
+  font-size:17px; margin-top:2px;}
+.card .where{font-style:normal; font-family:"Alegreya Sans",sans-serif; color:var(--muted); font-size:15px;}
+.card .desc{color:var(--muted); font-size:15.5px; margin-top:10px; line-height:1.55;}
+.tagline{display:inline-block; margin-top:14px; font-size:12.5px; font-weight:800;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--accent);
+  background:var(--accent-soft); padding:4px 11px; border-radius:var(--r-pill);}
+.card.hide{display:none;}
+.card.reflow{animation:riseIn 380ms var(--ease-out) both;}
+
+.tl{position:relative; padding-left:34px;}
+.tl::before{content:""; position:absolute; left:9px; top:8px; bottom:8px; width:2px;
+  background:linear-gradient(var(--accent-soft),var(--rule));}
+.tl li{position:relative; padding-bottom:30px;}
+.tl li::before{content:""; position:absolute; left:-32px; top:7px; width:14px; height:14px;
+  border-radius:50%; background:var(--paper); border:3px solid var(--accent);}
+.tl .y{font-size:13px; font-weight:800; letter-spacing:.1em; color:var(--accent); text-transform:uppercase;}
+.tl .t{font-size:20px; font-weight:700; margin-top:2px;}
+.tl .s{color:var(--muted); font-size:16px;}
+
+.lang{margin-bottom:22px;}
+.lang .row{display:flex; justify-content:space-between; align-items:baseline; gap:12px;}
+.lang .n{font-size:19px; font-weight:700;}
+.lang .lv{font-size:14.5px; color:var(--muted); font-weight:600;}
+.meter{display:flex; gap:5px; margin-top:9px;}
+.meter i{flex:1; height:9px; border-radius:3px; background:var(--paper-2);
+  border:1px solid var(--rule); overflow:hidden; position:relative;}
+.meter i.on::after{content:""; position:absolute; inset:-1px; background:var(--accent);
+  transform:scaleX(0); transform-origin:left; }
+.view.is-active .meter i.on::after{animation:fill 460ms var(--ease-out) both;}
+.meter i.on:nth-child(1)::after{animation-delay:120ms}
+.meter i.on:nth-child(2)::after{animation-delay:190ms}
+.meter i.on:nth-child(3)::after{animation-delay:260ms}
+.meter i.on:nth-child(4)::after{animation-delay:330ms}
+.meter i.on:nth-child(5)::after{animation-delay:400ms}
+@keyframes fill{to{transform:scaleX(1);}}
+
+.chips{display:flex; flex-wrap:wrap; gap:10px;}
+.chips li{background:var(--paper-2); border:1px solid var(--rule); color:var(--ink-2);
+  padding:10px 18px; border-radius:var(--r-pill); font-size:15.5px; font-weight:500;
+  transition:transform 200ms var(--ease-out), background 200ms var(--ease-out),
+             color 200ms var(--ease-out), border-color 200ms var(--ease-out);}
+.chips li:hover{background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2);
+  transform:translateY(-2px);}
+
+.contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--sp-4);}
+.ccard{
+  display:flex; align-items:flex-start; gap:14px; text-align:left; width:100%;
+  background:var(--card); border:1px solid var(--rule); border-radius:var(--r);
+  padding:20px 22px; box-shadow:var(--shadow); font:inherit; color:inherit;
+  cursor:pointer; text-decoration:none; min-height:48px;
+  transition:transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out),
+             border-color 220ms var(--ease-out);
+}
+.ccard:hover{transform:translateY(-3px); box-shadow:var(--shadow-lg); border-color:var(--accent-soft);}
+.ccard:active{transform:scale(.985);}
+.ccard .ic{flex:0 0 auto; width:42px; height:42px; border-radius:12px; background:var(--accent-soft);
+  display:grid; place-items:center;}
+.ccard .ic svg{width:21px;height:21px;fill:none;stroke:var(--accent-2);stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round;}
+.ccard .k{display:block; font-size:13px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--muted);}
+.ccard .v{display:block; font-size:18px; font-weight:700; word-break:break-word; line-height:1.35;}
+.ccard .hint{display:block; margin-top:2px; font-size:13.5px; color:var(--muted);}
+
+.toast{
+  position:fixed; left:50%; bottom:28px; z-index:80;
+  transform:translate(-50%,20px); opacity:0; pointer-events:none;
+  background:var(--band); color:var(--on-band); padding:13px 22px; border-radius:var(--r-pill);
+  font-weight:600; font-size:15.5px; box-shadow:var(--shadow-lg);
+  display:flex; align-items:center; gap:9px;
+  transition:opacity 220ms var(--ease-out), transform 220ms var(--ease-out);
+}
+.toast.show{opacity:1; transform:translate(-50%,0);}
+.toast svg{width:18px;height:18px;fill:none;stroke:var(--accent-on-band);stroke-width:2.2;
+  stroke-linecap:round;stroke-linejoin:round;}
+
+footer{border-top:1px solid var(--rule); background:var(--paper-2);}
+footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
+  align-items:center; padding-top:26px; padding-bottom:26px; color:var(--muted); font-size:15px;}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr; gap:30px;}
+  .brand span{display:none;}
+  nav.tabs{margin-left:0; width:100%;}
+  .topbar .wrap{flex-wrap:wrap; gap:0; padding-bottom:4px;}
+  .topbar .brand{padding:12px 0;}
+}
+@media (max-width:520px){
+  body{font-size:16px;}
+  .tab{padding:12px 11px; font-size:15px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-delay:0ms !important;
+    transition-duration:.001ms !important;}
+  .stagger>*{opacity:1; transform:none;}
+  .stave .line{stroke-dashoffset:0;}
+  .stave .note{opacity:1;}
+  .meter i.on::after{transform:scaleX(1);}
+  .pill{transition:none;}
+  .hero .glow{transition:none;}
+  .rotator .word{opacity:1 !important; transform:none !important; position:static;}
+  .rotator{display:inline;}
+  .rotator .word:not(:last-child)::after{content:" · ";}
+}
+</style>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect class="k" x="1" y="4" width="7.5" height="24" rx="2"/>
+        <rect class="k" x="10.2" y="4" width="7.5" height="24" rx="2"/>
+        <rect class="a" x="19.4" y="4" width="7.5" height="24" rx="2"/>
+        <rect class="k" x="6.2" y="4" width="4.4" height="14" rx="1.4"/>
+        <rect class="k" x="15.4" y="4" width="4.4" height="14" rx="1.4"/>
+      </svg>
+      <span>E. Francisco Adarme</span>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <button class="tab" role="tab" id="tab-inicio" aria-controls="inicio" aria-selected="true" data-v="inicio">Inicio</button>
+      <button class="tab" role="tab" id="tab-experiencia" aria-controls="experiencia" aria-selected="false" data-v="experiencia">Experiencia</button>
+      <button class="tab" role="tab" id="tab-formacion" aria-controls="formacion" aria-selected="false" data-v="formacion">Formación</button>
+      <button class="tab" role="tab" id="tab-idiomas" aria-controls="idiomas" aria-selected="false" data-v="idiomas">Idiomas</button>
+      <button class="tab" role="tab" id="tab-contacto" aria-controls="contacto" aria-selected="false" data-v="contacto">Contacto</button>
+      <span class="pill" aria-hidden="true"></span>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="stage">
+  <div class="view is-active" id="inicio" role="tabpanel" aria-labelledby="tab-inicio" tabindex="-1">
+    <div class="hero" id="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <h1><span class="given">E. Francisco</span><br>Adarme</h1>
+
+        <p class="role">Profesor de
+          <span class="rotator" aria-hidden="true">
+            <span class="word is-on">Inglés</span>
+            <span class="word">Música</span>
+            <span class="word">Español</span>
+          </span>
+          <span class="sr">Inglés, Música y Español</span>
+        </p>
+
+        <div class="hero-grid">
+          <div>
+            <p class="bio">Docente con formación universitaria en Música y certificaciones
+              internacionales TEFL y TKT (KAL‑CLIL). He enseñado inglés a niños, adolescentes y
+              adultos en academias, colegios y empresas de Colombia y China, con experiencia
+              paralela en educación musical y en español como lengua extranjera.</p>
+
+            <div class="hero-cta">
+              <button class="btn btn-primary" data-go="contacto">
+                <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+                Contactar
+              </button>
+              <button class="btn btn-ghost" data-go="experiencia">
+                <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                Ver experiencia
+              </button>
+            </div>
+          </div>
+
+          <dl class="facts">
+            <div class="fact"><dt class="n" data-count="8">0</dt><dd class="l">Puestos docentes</dd></div>
+            <div class="fact"><dt class="n" data-count="2">0</dt><dd class="l">Países donde he enseñado<br><span>Colombia y China</span></dd></div>
+            <div class="fact"><dt class="n" data-count="3">0</dt><dd class="l">Idiomas de trabajo<br><span>Español · Inglés · Chino</span></dd></div>
+            <div class="fact"><dt class="n small">TEFL · TKT</dt><dd class="l">Certificaciones internacionales</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="kb-block">
+        <div class="wrap kb-head">
+          <p class="kb-hint">Toca las teclas</p>
+          <button class="kb-play" id="kbplay" aria-label="Reproducir una escala de muestra">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z"/></svg>
+            <span>Escala</span>
+          </button>
+        </div>
+        <div class="keys" id="keys" role="group" aria-label="Teclado de piano interactivo"></div>
+      </div>
+    </div>
+
+    <section class="pad">
+      <div class="wrap">
+        <p class="eyebrow">Qué hago</p>
+        <h2 class="h-sec">Enseñar idiomas y música con el mismo método</h2>
+        <p class="sub">Escuchar primero, corregir después. Ajustar el material al nivel real del alumno, no al que dice el temario.</p>
+        <div class="grid two stagger">
+          <article class="card">
+            <div class="role">Inglés</div>
+            <p class="desc">Grupos de primaria, adolescentes y adultos. Inglés general, conversacional y corporativo. Metodología CLIL y preparación de material propio.</p>
+          </article>
+          <article class="card">
+            <div class="role">Música</div>
+            <p class="desc">Lenguaje musical, práctica instrumental y actividades de conjunto. Formación universitaria en Música (UNAB) y conservatorio.</p>
+          </article>
+          <article class="card">
+            <div class="role">Español como lengua extranjera</div>
+            <p class="desc">Clases particulares y en colegio para alumnado no hispanohablante, con experiencia directa en aulas chinas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="view" id="experiencia" role="tabpanel" aria-labelledby="tab-experiencia" tabindex="-1">
+    <section class="pad">
+      <div class="wrap">
+        <p class="eyebrow">Trayectoria</p>
+        <h2 class="h-sec">Experiencia docente</h2>
+        <p class="sub">Ocho puestos entre Colombia y China, en academias de idiomas, colegios y formación en empresa.</p>
+
+        <div class="filters" role="group" aria-label="Filtrar experiencia">
+          <button class="fchip" aria-pressed="true" data-f="all">Todo</button>
+          <button class="fchip" aria-pressed="false" data-f="en">Inglés</button>
+          <button class="fchip" aria-pressed="false" data-f="mu">Música y español</button>
+        </div>
+
+        <div class="grid two" id="joblist">
+          <article class="card" data-cat="en">
+            <div class="role">Profesor titular de adultos</div>
+            <div class="org">Encool English Academy <span class="where">· Dongguan, China</span></div>
+            <p class="desc">Inglés general y conversacional para grupos de adultos, con seguimiento del progreso.</p>
+            <span class="tagline">Inglés</span>
+          </article>
+          <article class="card" data-cat="en">
+            <div class="role">Profesor titular de primaria</div>
+            <div class="org">Dongguan Foreign Language School <span class="where">· Dongguan, China</span></div>
+            <p class="desc">Inglés como asignatura troncal en primaria y docencia de español como lengua extranjera.</p>
+            <span class="tagline">Inglés</span>
+          </article>
+          <article class="card" data-cat="en">
+            <div class="role">Profesor de inglés</div>
+            <div class="org">English Translation Center <span class="where">· Dongguan, China</span></div>
+            <p class="desc">Clases de inglés a alumnos de distintos niveles y edades.</p>
+            <span class="tagline">Inglés</span>
+          </article>
+          <article class="card" data-cat="en">
+            <div class="role">Clases particulares de inglés</div>
+            <div class="org">Luxottica <span class="where">· Dongguan, China</span></div>
+            <p class="desc">Formación individual para personal de la compañía, orientada al uso profesional.</p>
+            <span class="tagline">Corporativo</span>
+          </article>
+          <article class="card" data-cat="en">
+            <div class="role">Profesor de inglés</div>
+            <div class="org">Praxis English Academy <span class="where">· Bucaramanga, Colombia</span></div>
+            <p class="desc">Cursos de inglés por niveles en academia de idiomas.</p>
+            <span class="tagline">Inglés</span>
+          </article>
+          <article class="card" data-cat="en">
+            <div class="role">Formador de inglés para ingenieros residentes</div>
+            <div class="org">CVS Explorations <span class="where">· Bucaramanga, Colombia</span></div>
+            <p class="desc">Programa de inglés técnico dirigido al equipo de ingeniería de la empresa.</p>
+            <span class="tagline">Inglés técnico</span>
+          </article>
+          <article class="card" data-cat="mu">
+            <div class="role">Profesor de música</div>
+            <div class="org">Colegio San Pedro Claver <span class="where">· Primaria · Bucaramanga, Colombia</span></div>
+            <p class="desc">Lenguaje musical, práctica instrumental y actividades de conjunto.</p>
+            <span class="tagline">Música</span>
+          </article>
+          <article class="card" data-cat="mu">
+            <div class="role">Clases particulares de español</div>
+            <div class="org">Donto <span class="where">· Dongguan, China</span></div>
+            <p class="desc">Enseñanza individual de español a alumnos adultos.</p>
+            <span class="tagline">Español</span>
+          </article>
+        </div>
+        <p class="sub" id="fcount" role="status" style="margin-top:22px;margin-bottom:0"></p>
+      </div>
+    </section>
+  </div>
+
+  <div class="view" id="formacion" role="tabpanel" aria-labelledby="tab-formacion" tabindex="-1">
+    <section class="pad">
+      <div class="wrap">
+        <p class="eyebrow">Estudios</p>
+        <h2 class="h-sec">Formación y certificaciones</h2>
+        <p class="sub">Trayectoria académica a la izquierda; certificaciones de docencia de idiomas a la derecha.</p>
+
+        <div class="grid two" style="align-items:start">
+          <div>
+            <ul class="tl">
+              <li>
+                <div class="y">1998 – 2002</div>
+                <div class="t">Música</div>
+                <div class="s">Universidad Autónoma de Bucaramanga (UNAB), Colombia</div>
+              </li>
+              <li>
+                <div class="y">Conservatorio</div>
+                <div class="t">Formación musical</div>
+                <div class="s">Conservatorio del Tolima «Alberto Castilla», Ibagué</div>
+              </li>
+              <li>
+                <div class="y">Bachillerato</div>
+                <div class="t">Bachillerato académico</div>
+                <div class="s">Colegio Técnico Industrial José Elías Puyana, Colombia</div>
+              </li>
+            </ul>
+          </div>
+          <div class="grid stagger">
+            <article class="card">
+              <div class="role">TEFL</div>
+              <div class="org">CECAM International <span class="where">· 2008–2009</span></div>
+              <p class="desc">Teaching English as a Foreign Language.</p>
+            </article>
+            <article class="card">
+              <div class="role">TKT (KAL · CLIL)</div>
+              <div class="org">CECAM International <span class="where">· 2008–2009</span></div>
+              <p class="desc">Teaching Knowledge Test: Knowledge About Language y aprendizaje integrado de contenidos e idioma.</p>
+            </article>
+            <article class="card">
+              <div class="role">Inglés Avanzado II y III</div>
+              <div class="org">SENA <span class="where">· 2007</span></div>
+              <p class="desc">Formación en inglés de nivel avanzado.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="view" id="idiomas" role="tabpanel" aria-labelledby="tab-idiomas" tabindex="-1">
+    <section class="pad">
+      <div class="wrap">
+        <p class="eyebrow">Idiomas y competencias</p>
+        <h2 class="h-sec">Con qué trabajo</h2>
+        <p class="sub">Tres idiomas de aula y las competencias que salen de enseñar en dos continentes.</p>
+
+        <div class="grid two" style="align-items:start">
+          <div>
+            <div class="lang">
+              <div class="row"><span class="n">Español</span><span class="lv">Nativo</span></div>
+              <div class="meter" role="img" aria-label="Español: nivel nativo">
+                <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+              </div>
+            </div>
+            <div class="lang">
+              <div class="row"><span class="n">Inglés</span><span class="lv">Avanzado</span></div>
+              <div class="meter" role="img" aria-label="Inglés: nivel avanzado">
+                <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+              </div>
+            </div>
+            <div class="lang">
+              <div class="row"><span class="n">Chino</span><span class="lv">Conversacional</span></div>
+              <div class="meter" role="img" aria-label="Chino: nivel conversacional">
+                <i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow" style="margin-top:4px">Competencias</p>
+            <ul class="chips">
+              <li>Inglés para niños y adolescentes</li>
+              <li>Inglés para adultos</li>
+              <li>Inglés corporativo y técnico</li>
+              <li>Metodología CLIL</li>
+              <li>Español como lengua extranjera</li>
+              <li>Educación musical y solfeo</li>
+              <li>Piano y teclados</li>
+              <li>Clases particulares y en grupo</li>
+              <li>Aulas multiculturales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="view" id="contacto" role="tabpanel" aria-labelledby="tab-contacto" tabindex="-1">
+    <section class="pad">
+      <div class="wrap">
+        <p class="eyebrow">Hablemos</p>
+        <h2 class="h-sec">Contacto</h2>
+        <p class="sub">Basado en Santa Oliva, Baix Penedès (Tarragona). Referencias profesionales disponibles bajo petición.</p>
+
+        <div class="contact-grid stagger">
+          <a class="ccard" href="tel:+34671176375">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <span><span class="k">Teléfono</span><span class="v">+34 671 17 63 75</span><span class="hint">Toca para llamar</span></span>
+          </a>
+          <button class="ccard" data-copy="Jazzzmaster@gmail.com">
+            <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2.5 6 9.5 7 9.5-7"/></svg></span>
+            <span><span class="k">Email</span><span class="v">Jazzzmaster@gmail.com</span><span class="hint">Toca para copiar</span></span>
+          </button>
+          <div class="ccard" style="cursor:default">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><span class="k">Ubicación</span><span class="v">Santa Oliva, Tarragona</span><span class="hint">Carrer de les Moreres 6‑8, Casa 8D · 43710</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>E. Francisco Adarme · Profesor de Inglés, Música y Español</span>
+    <span>+34 671 17 63 75</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></svg><span id="toastmsg"></span>
+</div>
+
+<script>
+(function(){
+  var ORDER = ['inicio','experiencia','formacion','idiomas','contacto'];
+  var tabs  = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var views = {};
+  ORDER.forEach(function(id){ views[id] = document.getElementById(id); });
+  var pill = document.querySelector('.pill');
+  var current = 'inicio';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function movePill(){
+    var t = tabs.find(function(b){ return b.dataset.v === current; });
+    if(!t) return;
+    pill.style.width = (t.offsetWidth - 28) + 'px';
+    pill.style.transform = 'translateX(' + (t.offsetLeft + 14) + 'px)';
+  }
+
+  function show(id, opts){
+    opts = opts || {};
+    if(!views[id] || id === current) { if(id===current) movePill(); return; }
+    var back = ORDER.indexOf(id) < ORDER.indexOf(current);
+    var out = views[current], inn = views[id];
+
+    out.classList.remove('enter','enter-back');
+    out.classList.remove('is-active');
+    inn.classList.add('is-active');
+    void inn.offsetWidth;
+    inn.classList.remove('enter','enter-back');
+    void inn.offsetWidth;
+    inn.classList.add(back ? 'enter-back' : 'enter');
+
+    current = id;
+    tabs.forEach(function(b){ b.setAttribute('aria-selected', String(b.dataset.v === id)); });
+    movePill();
+    if(window.__onView) window.__onView(id);
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+    if(opts.push !== false && history.replaceState){
+      history.pushState({v:id}, '', '#' + id);
+    }
+    if(opts.focus) inn.focus({preventScroll:true});
+  }
+
+  tabs.forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.v, {focus:true}); });
+  });
+  document.querySelector('nav.tabs').addEventListener('keydown', function(e){
+    var i = tabs.findIndex(function(b){ return b === document.activeElement; });
+    if(i < 0) return;
+    var n = null;
+    if(e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+    if(e.key === 'ArrowLeft')  n = (i - 1 + tabs.length) % tabs.length;
+    if(e.key === 'Home') n = 0;
+    if(e.key === 'End')  n = tabs.length - 1;
+    if(n === null) return;
+    e.preventDefault(); tabs[n].focus(); show(tabs[n].dataset.v);
+  });
+
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.go, {focus:true}); });
+  });
+
+  window.addEventListener('popstate', function(){
+    var id = (location.hash || '#inicio').slice(1);
+    if(views[id]) show(id, {push:false});
+  });
+  window.addEventListener('resize', movePill);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.fchip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#joblist .card'));
+  var count = document.getElementById('fcount');
+  function filter(f){
+    var shown = 0;
+    cards.forEach(function(c){
+      var match = (f === 'all' || c.dataset.cat === f);
+      c.classList.toggle('hide', !match);
+      c.classList.remove('reflow');
+      if(match){
+        shown++;
+        void c.offsetWidth;
+        c.style.animationDelay = (shown * 40) + 'ms';
+        c.classList.add('reflow');
+      }
+    });
+    count.textContent = shown + (shown === 1 ? ' puesto' : ' puestos') +
+      (f === 'all' ? '' : ' en esta categoría');
+    chips.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.f === f)); });
+  }
+  chips.forEach(function(b){ b.addEventListener('click', function(){ filter(b.dataset.f); }); });
+  filter('all');
+
+  var toast = document.getElementById('toast'), tmsg = document.getElementById('toastmsg'), tid;
+  function say(msg){
+    tmsg.textContent = msg; toast.classList.add('show');
+    clearTimeout(tid); tid = setTimeout(function(){ toast.classList.remove('show'); }, 3200);
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var txt = b.dataset.copy;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){ say('Copiado: ' + txt); },
+                                                function(){ say(txt); });
+      } else { say(txt); }
+    });
+  });
+
+  var reduceMotion = reduce;
+  var NOTES = ['C4','D4','E4','F4','G4','A4','B4','C5','D5','E5','F5','G5','A5','B5'];
+  var SEMI  = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+  var BLACK_AFTER = [0,1,3,4,5,7,8,10,11,12];
+  var keysEl = document.getElementById('keys');
+  var ac = null, master = null;
+
+  function freq(name){
+    var n = SEMI[name[0]] + (name.length > 2 ? 1 : 0);
+    var oct = parseInt(name[name.length-1], 10);
+    return 440 * Math.pow(2, ((oct - 4) * 12 + n - 9) / 12);
+  }
+  function audio(){
+    if(ac) return ac;
+    var C = window.AudioContext || window.webkitAudioContext;
+    if(!C) return null;
+    ac = new C();
+    master = ac.createGain(); master.gain.value = 0.22; master.connect(ac.destination);
+    return ac;
+  }
+  function play(name){
+    var c = audio(); if(!c) return;
+    if(c.state === 'suspended') c.resume();
+    var t = c.currentTime, f = freq(name);
+    [[1,0.55],[2,0.18],[3,0.07]].forEach(function(h){
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = 'triangle'; o.frequency.value = f * h[0];
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(h[1], t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 1.5);
+      o.connect(g); g.connect(master); o.start(t); o.stop(t + 1.6);
+    });
+  }
+  function hit(el, name){
+    play(name);
+    el.classList.add('down');
+    setTimeout(function(){ el.classList.remove('down'); }, 170);
+  }
+  var built = 0;
+  function buildKeys(n){
+    if(!keysEl || built === n) return;
+    built = n;
+    keysEl.innerHTML = '';
+    keysEl.style.setProperty('--nk', n);
+    var notes = NOTES.slice(0, n);
+    notes.forEach(function(nm, i){
+      var b = document.createElement('button');
+      b.className = 'w'; b.type = 'button'; b.dataset.note = nm;
+      b.setAttribute('aria-label', 'Nota ' + nm[0] + ' ' + nm[1]);
+      keysEl.appendChild(b);
+    });
+    BLACK_AFTER.filter(function(i){ return i < n - 1; }).forEach(function(i){
+      var nm = notes[i][0] + '#' + notes[i][1];
+      var b = document.createElement('button');
+      b.className = 'b'; b.type = 'button'; b.dataset.note = nm;
+      b.setAttribute('aria-label', 'Nota ' + notes[i][0] + ' sostenido');
+      b.style.left = 'calc(' + ((i + 1) / n * 100) + '% - (100% / ' + n + ' * 0.31))';
+      keysEl.appendChild(b);
+    });
+    if(keysEl.dataset.wired) return;
+    keysEl.dataset.wired = '1';
+    keysEl.addEventListener('pointerdown', function(e){
+      var k = e.target.closest('button[data-note]'); if(!k) return;
+      e.preventDefault(); hit(k, k.dataset.note);
+    });
+    keysEl.addEventListener('keydown', function(e){
+      if(e.key !== 'Enter' && e.key !== ' ') return;
+      var k = e.target.closest('button[data-note]'); if(!k) return;
+      e.preventDefault(); hit(k, k.dataset.note);
+    });
+    keysEl.addEventListener('pointerover', function(e){
+      var k = e.target.closest('button[data-note]');
+      if(k && e.buttons === 1) hit(k, k.dataset.note);
+    });
+  }
+  function octaves(){ return window.innerWidth < 720 ? 7 : 14; }
+  buildKeys(octaves());
+  var kbT; window.addEventListener('resize', function(){
+    clearTimeout(kbT); kbT = setTimeout(function(){ buildKeys(octaves()); }, 180);
+  });
+
+  var playBtn = document.getElementById('kbplay'), seqTimers = [];
+  if(playBtn){
+    playBtn.addEventListener('click', function(){
+      seqTimers.forEach(clearTimeout); seqTimers = [];
+      playBtn.dataset.playing = 'true';
+      var wk = keysEl.querySelectorAll('.w'), top = Math.min(7, wk.length - 1);
+      var seq = []; for(var s=0;s<=top;s++) seq.push(s); for(var s2=top-1;s2>=0;s2--) seq.push(s2);
+      seq.forEach(function(idx, i){
+        seqTimers.push(setTimeout(function(){
+          var k = wk[idx];
+          if(k) hit(k, k.dataset.note);
+          if(i === seq.length - 1) playBtn.dataset.playing = 'false';
+        }, i * 165));
+      });
+    });
+  }
+
+  var words = Array.prototype.slice.call(document.querySelectorAll('.rotator .word'));
+  var wi = 0, rotTimer = null;
+  function rotate(){
+    if(reduceMotion || words.length < 2) return;
+    var cur = words[wi]; wi = (wi + 1) % words.length; var nxt = words[wi];
+    cur.classList.remove('is-on'); cur.classList.add('is-out');
+    nxt.classList.remove('is-out'); nxt.classList.add('is-on');
+    setTimeout(function(){ cur.classList.remove('is-out'); }, 340);
+  }
+  function startRotator(){
+    if(reduceMotion) return;
+    clearInterval(rotTimer); rotTimer = setInterval(rotate, 2300);
+  }
+  function stopRotator(){ clearInterval(rotTimer); }
+
+  function countUp(){
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      var to = parseInt(el.dataset.count, 10), t0 = null;
+      if(reduceMotion){ el.textContent = to; return; }
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / 800, 1);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  var hero = document.getElementById('hero'), glow = hero && hero.querySelector('.glow');
+  if(hero && glow && !reduceMotion && window.matchMedia('(pointer:fine)').matches){
+    hero.addEventListener('pointermove', function(e){
+      var r = hero.getBoundingClientRect();
+      glow.style.transform = 'translate3d(' + (e.clientX - r.left) + 'px,' +
+                             (e.clientY - r.top) + 'px,0)';
+    });
+  }
+
+  window.__onView = function(id){
+    if(id === 'inicio'){ countUp(); startRotator(); } else { stopRotator(); }
+  };
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden) stopRotator(); else if(current === 'inicio') startRotator();
+  });
+
+  var start = (location.hash || '#inicio').slice(1);
+  if(views[start] && start !== 'inicio'){ show(start, {push:false}); }
+  else { movePill(); countUp(); startRotator(); }
+  setTimeout(movePill, 300);
+})();
+</script>
+
+</body>
+</html>
