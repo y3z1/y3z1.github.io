@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adarme Cornejo — Familia</title>
+<meta name="description" content="Perfiles profesionales de la familia Adarme Cornejo— Yezid, Ivan, Francisco y Jessica.">
+
+<!-- OG / Social -->
+<meta property="og:title" content="Adarme Cornejo— Familia">
+<meta property="og:description" content="Perfiles profesionales de la familia Adarme Cornejo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adarme.es">
+<meta property="og:image" content="https://adarme.es/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adarme Cornejo — Familia">
+<meta name="twitter:description" content="Perfiles profesionales de la familia Adarme Cornejo.">
+
+<!-- Favicon inline SVG -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0f0d'/><text y='24' x='4' font-size='22' font-family='seri[...]
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #f4f2ed;
+    --text:      #111110;
+    --text-2:    #555550;
+    --text-3:    #999890;
+    --line:      #d8d5cc;
+    --hover-bg:  #111110;
+    --hover-inv: #f4f2ed;
+    --soon-op:   0.15;
+    --focus:     #0066cc;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #0d0d0b;
+      --text:      #f0ede6;
+      --text-2:    #9a9890;
+      --text-3:    #504e48;
+      --line:      #252420;
+      --hover-bg:  #f0ede6;
+      --hover-inv: #0d0d0b;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100dvh;
+    display: flex; flex-direction: column;
+    cursor: none;
+    overflow-x: hidden;
+  }
+
+  /* ── SKIP LINK ── */
+  .skip-link {
+    position: absolute; top: -100px; left: 1rem;
+    background: var(--focus); color: #fff;
+    padding: 8px 16px; border-radius: 3px;
+    font-size: 0.85rem; font-weight: 500;
+    text-decoration: none; z-index: 9999;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 1rem; }
+
+  /* ── CURSOR ── */
+  #cur {
+    position: fixed; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--text);
+    pointer-events: none; z-index: 9000;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: difference;
+    transition: width 0.4s cubic-bezier(0.16,1,0.3,1), height 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  #cur.big { width: 96px; height: 96px; }
+  @media (prefers-reduced-motion: reduce) { #cur { transition: none; } }
+
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.75rem 2.5rem;
+    mix-blend-mode: difference;
+    opacity: 0; animation: fadeUp 0.5s ease 0.05s forwards;
+  }
+  @media (prefers-reduced-motion: reduce) { header { animation: none; opacity: 1; } }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.15rem; letter-spacing: 0.38em;
+    color: #fff; text-decoration: none;
+  }
+  .logo:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 2px; }
+
+  .header-tag { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.4; }
+
+  /* ── MAIN ── */
+  main { flex: 1; margin-top: 88px; }
+
+  /* ── NAME ROWS ── */
+  .name-row {
+    display: block; text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    position: relative; overflow: hidden;
+    min-height: 44px;
+    opacity: 0; transform: translateY(14px);
+    animation: fadeUp 0.65s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+  .name-row:first-child { border-top: 1px solid var(--line); }
+  .name-row:nth-child(1){ animation-delay: 0.12s; }
+  .name-row:nth-child(2){ animation-delay: 0.20s; }
+  .name-row:nth-child(3){ animation-delay: 0.28s; }
+  .name-row:nth-child(4){ animation-delay: 0.36s; }
+  @media (prefers-reduced-motion: reduce) { .name-row { animation: none; opacity: 1; transform: none; } }
+
+  /* sweep */
+  .name-row::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--hover-bg);
+    transform: translateY(102%);
+    transition: transform 0.55s cubic-bezier(0.77,0,0.18,1);
+    z-index: 0;
+  }
+  .name-row:hover::before, .name-row:focus-visible::before { transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .name-row::before { transition: none; } }
+
+  .name-row:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+  .name-row.soon { pointer-events: none; }
+  .name-row.soon::before { display: none; }
+
+  /* ── NOISE overlay for soon rows ── */
+  .name-row.soon::after {
+    content: ''; position: absolute; inset: 0; z-index: 2;
+    pointer-events: none; opacity: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='[...]
+    background-size: 200px 200px;
+    mix-blend-mode: overlay;
+    transition: opacity 0.3s;
+  }
+  /* since soon rows have no pointer-events we animate on parent hover via JS */
+
+  /* ── ROW INNER ── */
+  .row-inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 44px 1fr auto 44px;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    gap: 1.5rem;
+    min-height: clamp(96px, 17vh, 152px);
+  }
+
+  .row-num {
+    font-size: 0.6rem; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--text-3);
+    align-self: flex-start; padding-top: 6px;
+    transition: color 0.35s;
+  }
+  .name-row:hover .row-num,
+  .name-row:focus-visible .row-num { color: var(--hover-inv); opacity: 0.35; }
+
+  .row-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.8rem, 10vw, 9.5rem);
+    letter-spacing: 0.05em; line-height: 0.88;
+    color: var(--text); transition: color 0.35s;
+    white-space: nowrap;
+  }
+  .name-row:hover .row-name,
+  .name-row:focus-visible .row-name { color: var(--hover-inv); }
+  .name-row.soon .row-name { opacity: var(--soon-op); }
+
+  .row-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+
+  .row-role {
+    font-size: 0.67rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-2);
+    text-align: right; line-height: 1.65;
+    transition: color 0.35s;
+  }
+  .name-row:hover .row-role,
+  .name-row:focus-visible .row-role { color: var(--hover-inv); opacity: 0.5; }
+
+  .row-location {
+    font-size: 0.6rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-3);
+    text-align: right; transition: color 0.35s;
+  }
+  .name-row:hover .row-location,
+  .name-row:focus-visible .row-location { color: var(--hover-inv); opacity: 0.3; }
+
+  .row-arrow {
+    font-size: 1.3rem; color: var(--text-3);
+    text-align: right; opacity: 0;
+    transform: translate(-6px,6px);
+    transition: opacity 0.28s, transform 0.32s, color 0.35s;
+  }
+  .name-row:hover .row-arrow,
+  .name-row:focus-visible .row-arrow { opacity: 1; transform: translate(0,0); color: var(--hover-inv); }
+  @media (prefers-reduced-motion: reduce) { .row-arrow { transition: none; } }
+
+  /* soon badge */
+  .soon-badge {
+    font-size: 0.58rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--text-3);
+    border: 1px solid var(--line); padding: 4px 10px;
+    border-radius: 2px; white-space: nowrap;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2rem 2.5rem; border-top: 1px solid var(--line);
+    opacity: 0; animation: fadeUp 0.5s ease 0.5s forwards;
+  }
+  @media (prefers-reduced-motion: reduce) { footer { animation: none; opacity: 1; } }
+
+  footer span { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); }
+
+  /* ── KEYFRAMES ── */
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .row-inner { grid-template-columns: 36px 1fr; padding: 1rem 1.25rem; min-height: 80px; gap: 0.75rem; }
+    .row-meta, .row-arrow { display: none; }
+    .row-name { font-size: clamp(2.8rem, 13vw, 4.5rem); white-space: normal; }
+    body { cursor: auto; }
+    #cur { display: none; }
+    a.name-row { pointer-events: auto; cursor: pointer; }
+    .name-row.soon { pointer-events: none; }
+    header { padding: 1.25rem 1.5rem; }
+    footer { padding: 1.5rem 1.25rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-nav">Saltar al contenido</a>
+<div id="cur" aria-hidden="true"></div>
+
+<header role="banner">
+  <a href="/" class="logo" aria-label="Adarme — Inicio">Adarme</a>
+  <span class="header-tag" aria-hidden="true" id="yr">2026</span>
+</header>
+
+<main id="main-content">
+  <nav id="main-nav" aria-label="Perfiles familiares">
+
+    <a href="./yezid/index.html" class="name-row"
+       aria-label="Yezid Adarme — OTC y AI, Aker BioMarine, Reus España">
+      <div class="row-inner">
+        <span class="row-num" aria-hidden="true">01</span>
+        <span class="row-name" aria-hidden="true">Yezid</span>
+        <div class="row-meta" aria-hidden="true">
+          <span class="row-role">OTC & AI · Aker BioMarine</span>
+          <span class="row-location">Reus, España</span>
+        </div>
+        <span class="row-arrow" aria-hidden="true">↗</span>
+      </div>
+    </a>
+
+    <a href="https://adarme.ca" target="_blank" rel="noopener noreferrer" class="name-row"
+       aria-label="Ivan Adarme — GIS Specialist y Forestry Engineer, Ontario Canadá">
+      <div class="row-inner">
+        <span class="row-num" aria-hidden="true">02</span>
+        <span class="row-name" aria-hidden="true">Ivan</span>
+        <div class="row-meta" aria-hidden="true">
+          <span class="row-role">GIS Specialist · Forestry Engineer</span>
+          <span class="row-location">Ontario, Canadá</span>
+        </div>
+        <span class="row-arrow" aria-hidden="true">↗</span>
+      </div>
+    </a>
+
+    <a href="./francisco/index.html" class="name-row"
+       aria-label="E. Francisco Adarme — Profesor de Inglés, Música y Español, Tarragona España">
+      <div class="row-inner">
+        <span class="row-num" aria-hidden="true">03</span>
+        <span class="row-name" aria-hidden="true">E. Francisco</span>
+        <div class="row-meta" aria-hidden="true">
+          <span class="row-role">Profesor · Inglés & Música</span>
+          <span class="row-location">Tarragona, España</span>
+        </div>
+        <span class="row-arrow" aria-hidden="true">↗</span>
+      </div>
+    </a>
+
+    <div class="name-row soon" role="listitem" aria-label="Jessica Adarme — perfil próximamente">
+      <div class="row-inner">
+        <span class="row-num" aria-hidden="true">04</span>
+        <span class="row-name" aria-hidden="true">Jessica</span>
+        <div class="row-meta"><span class="soon-badge">Próximamente</span></div>
+      </div>
+    </div>
+
+  </nav>
+</main>
+
+<footer role="contentinfo">
+  <span>Familia Adarme</span>
+  <span id="copy">© <span id="yr2">2026</span> · adarme.es</span>
+</footer>
+
+<script>
+  // Dynamic year
+  const y = new Date().getFullYear();
+  document.getElementById('yr').textContent = y;
+  document.getElementById('yr2').textContent = y;
+
+  // Cursor
+  const cur = document.getElementById('cur');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouch = !window.matchMedia('(pointer: fine)').matches;
+
+  if (!prefersReduced && !isTouch) {
+    let dx = 0, dy = 0, mx = window.innerWidth/2, my = window.innerHeight/2;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+    (function loop() {
+      dx += (mx - dx) * 0.16; dy += (my - dy) * 0.16;
+      cur.style.left = dx + 'px'; cur.style.top = dy + 'px';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a.name-row').forEach(el => {
+      el.addEventListener('mouseenter', () => cur.classList.add('big'));
+      el.addEventListener('mouseleave', () => cur.classList.remove('big'));
+    });
+  } else {
+    cur.style.display = 'none';
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
