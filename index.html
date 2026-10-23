@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Perfiles profesionales de la familia Adarme Cornejo.">
 
 <!-- Favicon inline SVG -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0f0d'/><text y='24' x='4' font-size='22' font-family='seri[...]
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0f0d'/><text y='24' x='4' font-size='22' font-family='serif' font-weight='700' fill='%23f4f2ed'>A</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -90,7 +90,9 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.75rem 2.5rem;
-    mix-blend-mode: difference;
+    background: rgba(244, 242, 237, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     opacity: 0; animation: fadeUp 0.5s ease 0.05s forwards;
   }
   @media (prefers-reduced-motion: reduce) { header { animation: none; opacity: 1; } }
@@ -98,14 +100,15 @@
   .logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.15rem; letter-spacing: 0.38em;
-    color: #fff; text-decoration: none;
+    color: var(--text); text-decoration: none;
   }
   .logo:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 2px; }
 
-  .header-tag { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.4; }
+  .header-tag { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text); opacity: 0.6; }
 
   /* ── MAIN ── */
-  main { flex: 1; margin-top: 88px; }
+  main { flex: 1; margin-top: 88px; background: transparent; }
+  nav { background: transparent; }
 
   /* ── NAME ROWS ── */
   .name-row {
@@ -115,6 +118,7 @@
     min-height: 44px;
     opacity: 0; transform: translateY(14px);
     animation: fadeUp 0.65s cubic-bezier(0.16,1,0.3,1) forwards;
+    background: transparent;
   }
   .name-row:first-child { border-top: 1px solid var(--line); }
   .name-row:nth-child(1){ animation-delay: 0.12s; }
@@ -142,12 +146,11 @@
   .name-row.soon::after {
     content: ''; position: absolute; inset: 0; z-index: 2;
     pointer-events: none; opacity: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOcta[...]
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0.12'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
     background-size: 200px 200px;
     mix-blend-mode: overlay;
     transition: opacity 0.3s;
   }
-  /* since soon rows have no pointer-events we animate on parent hover via JS */
 
   /* ── ROW INNER ── */
   .row-inner {
